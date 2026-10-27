@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lamesalab — Marketing y Consultoria para Restaurantes</title>
+  <meta name="description" content="Consultoría estratégica integral para negocios. Diagnosticamos tu momento y te damos el próximo paso: herramientas gratuitas o un plan para escalar con publicidad."/>
+
+  <!-- Tailwind (Play CDN — para prototipo. Luego se puede compilar Tailwind local para producción) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    { DEFAULT: '#44403c', soft: '#292524' },
+            cream:  '#f6f7f2', 
+            sand:   '#f0e9df',
+            clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+            sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Fraunces"', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+
+<body class="bg-cream text-ink font-sans antialiased">
+
+  <!-- ==================== NAV ==================== -->
+<header class="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-sand">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <img src="../imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto">
+    <a href="#diagnostico" class="inline-flex items-center gap-2 rounded-full bg-clay hover:bg-clay-dark text-white text-sm font-600 px-5 py-2.5 transition-colors">
+      Diagnóstico gratis
+    </a>
+  </nav>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section id="inicio" class="bg-cream relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5 pt-16 pb-18 md:pt-24 md:pb-18 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 rounded-full bg-sand text-ink-soft text-xs font-600 uppercase tracking-wider px-3 py-1.5 mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
+        Marketing y Consultoria para Restaurantes
+      </span>
+      <h1 class="font-display text-4xl sm:text-3xl lg:text-4xl font-600 leading-[1.05] tracking-tight text-balance justify-center">
+        Ordenamos tu negocio gastronómico en <span class="text-clay">30 días</span> antes de que inviertas en publicidad.
+      </h1>
+      <p class="mt-6 text-lg text-ink-soft leading-relaxed max-w-lg justify-center">Primero entendemos tu restaurante, tus números y tus clientes. Recién después definimos qué necesitás para crecer — herramientas, estrategia o publicidad, cuando tenga sentido.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#diagnostico" class="inline-flex items-center justify-center gap-2 rounded-full bg-ink hover:bg-ink-soft text-cream font-600 px-7 py-3.5 transition-colors uppercase">
+          Diagnosticá tu negocio gratis
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+      <div class="mt-10 flex items-center gap-6 text-sm text-ink-soft">
+        <div><span class="font-display text-2xl font-600 text-ink">6+</span><br/>años de pizzería propia</div>
+        <div class="w-px h-10 bg-sand"></div>
+        <div><span class="font-display text-2xl font-600 text-ink">2</span><br/>arquitectos + economía urbana</div>
+      </div>
+    </div>
+
+    <!-- Siluetas placeholder de Marla y Frederick -->
+    <div class="relative">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-sand to-cream rounded-[2rem] rotate-2"></div>
+      <div class="relative bg-white/60 rounded-[2rem] border border-sand p-8 shadow-sm">
+        <div class="grid grid-cols-2 gap-6">
+          <!-- Persona 1 -->
+          <figure class="text-center">
+            <div class="aspect-[3/4] rounded-2xl bg-gradient-to-b from-sage/15 to-sage/5 flex items-end justify-center overflow-hidden">
+              <!-- SILUETA placeholder — reemplazar por foto de Marla -->
+              <svg viewBox="0 0 120 160" class="w-full h-full text-sage" role="img" aria-label="Silueta de Marla">
+                <circle cx="60" cy="46" r="26" fill="currentColor" opacity="0.9"/>
+                <path d="M18 160c0-30 18-52 42-52s42 22 42 52z" fill="currentColor" opacity="0.9"/>
+              </svg>
+            </div>
+            <figcaption class="mt-3">
+              <p class="font-display font-600 text-lg">Marla</p>
+              <p class="text-xs text-ink-soft">Arquitecta · Estrategia de marca & operación gastronómica</p>
+            </figcaption>
+          </figure>
+          <!-- Persona 2 -->
+          <figure class="text-center">
+            <div class="aspect-[3/4] rounded-2xl bg-gradient-to-b from-clay/15 to-clay/5 flex items-end justify-center overflow-hidden">
+              <!-- SILUETA placeholder — reemplazar por foto de Frederick -->
+              <svg viewBox="0 0 120 160" class="w-full h-full text-clay" role="img" aria-label="Silueta de Frederick">
+                <circle cx="60" cy="46" r="26" fill="currentColor" opacity="0.9"/>
+                <path d="M18 160c0-30 18-52 42-52s42 22 42 52z" fill="currentColor" opacity="0.9"/>
+              </svg>
+             </div>
+            <figcaption class="mt-3">
+              <p class="font-display font-600 text-lg">Frederick</p>
+              <p class="text-xs text-ink-soft">Arquitecto · Publicidad digital</p>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="mt-6 text-center text-xs text-ink-soft/70 italic">
+          * Siluetas temporales — reemplazables por sus fotos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECCIÓN DOLORES (ACCORDION) ================= -->
+<section class="bg-cream py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-sm font-semibold text-clay mb-3 uppercase">Lo que está frenando tu restaurante</div>
+    <h2 class="font-serif text-3xl md:text-4xl font-semibold text-ink mb-4" style="font-family:'Fraunces',Georgia,serif;">
+      Problemas reales de restaurantes <br> que nos encontramos en el camino.
+    </h2>
+    <p class="text-ink mb-12 max-w-xl">
+      Estos son los tres errores más comunes que fuimos trabajando.
+    </p>
+
+    <div class="space-y-3" id="dolores-accordion">
+
+      <!-- ITEM 1 -->
+      <div class="border border-[#4C3636]/15 rounded-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="acc-1">
+          <span class="font-serif text-lg font-semibold text-[#2a1f1f] pr-4" style="font-family:'Fraunces',Georgia,serif;">
+            ¿Tus martes y miércoles están vacíos?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="acc-1" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Plato fijo del día, activaciones puntuales y campañas segmentadas por horario (salida de colegio, almuerzo de oficina) — sin bajar precios ni entrenar al cliente a esperar descuento.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="border border-[#4C3636]/15 rounded-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="acc-2">
+          <span class="font-serif text-lg font-semibold text-[#2a1f1f] pr-4" style="font-family:'Fraunces',Georgia,serif;">
+            ¿Tienes clientes que compran una vez y no vuelven?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="acc-2" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed"> Instalamos el píxel y conectamos tu base de datos de clientes —los que ya compraron, los que dejaron el carrito, los que visitaron pero no siguieron— como la señal más valiosa que  puede tener Meta hoy. La segmentación manual de intereses ya no decide tanto; tus propios datos, sí. El tráfico que ya generaste deja de perderse después del primer contacto.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="border border-[#4C3636]/15 rounded-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="acc-3">
+          <span class="font-serif text-lg font-semibold text-[#2a1f1f] pr-4" style="font-family:'Fraunces',Georgia,serif;">
+            ¿Ya invertiste en publicidad y no viste resultado?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="acc-3" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Antes de lanzar campaña nueva, auditamos qué falló en el intento anterior: objetivo mal elegido, píxel mal instalado, o corte antes de tiempo. Después medimos con ventas reales cruzadas, no solo alcance o clics de la plataforma.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== CÓMO TRABAJAMOS ==================== -->
+<section id="como" class="bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 py-20">
+    <div class="max-w-2xl mb-12 fade-in">
+      <span class="text-sm font-semibold text-clay-light mb-3 uppercase">Cómo trabajamos</span>
+      <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2 text-cream">Primero entendemos donde esta parado el restaurante, después armamos estrategia.</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-8">
+      <div class="fade-in">
+        <div class="font-display text-5xl font-600 text-clay-light">01</div>
+        <h3 class="font-600 text-lg mt-3">Diagnosticamos</h3>
+        <p class="mt-2 text-cream/70 leading-relaxed">Completás el formulario y entendemos en qué categoría estás y cuál es tu problema principal.</p>
+      </div>
+      <div class="fade-in">
+        <div class="font-display text-5xl font-600 text-clay-light">02</div>
+        <h3 class="font-600 text-lg mt-3">Te ubicamos</h3>
+        <p class="mt-2 text-cream/70 leading-relaxed">Te decimos con honestidad si conviene ordenar bases con herramientas gratuitas o si ya estás para escalar.</p>
+      </div>
+      <div class="fade-in">
+        <div class="font-display text-5xl font-600 text-clay-light">03</div>
+        <h3 class="font-600 text-lg mt-3">Avanzamos juntos</h3>
+        <p class="mt-2 text-cream/70 leading-relaxed">Definimos el plan a tu medida, con pasos concretos y métricas para saber si funciona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DIAGNÓSTICO / FORMULARIO ==================== -->
+<section id="diagnostico" class="max-w-3xl mx-auto px-5 py-20">
+  <div class="text-center max-w-xl mx-auto mb-10">
+    <span class="text-sm font-semibold text-clay mb-3 uppercase">Diagnóstico gratis · 2 min</span>
+    <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2">¿En qué momento está tu negocio gastronómico?</h2>
+    <p class="mt-4 text-ink-soft text-lg">Respondé unas preguntas y al final te decimos exactamente cuál es tu próximo paso.</p>
+  </div>
+
+  <div class="bg-white rounded-3xl border border-sand shadow-sm p-6 sm:p-9">
+    <!-- Barra de progreso -->
+    <div id="progress-wrap" class="mb-8">
+      <div class="flex justify-between text-xs font-600 text-ink-soft mb-2">
+        <span id="progress-label">Paso 1</span>
+        <span id="progress-count"></span>
+      </div>
+      <div class="h-1.5 bg-sand rounded-full overflow-hidden">
+        <div id="progress-bar" class="h-full bg-clay rounded-full transition-all duration-300" style="width:0%"></div>
+      </div>
+    </div>
+
+    <form id="diag-form" novalidate>
+      <!-- Los pasos se inyectan desde diagnostico.js -->
+    </form>
+
+    <!-- Resultado (oculto hasta terminar) -->
+    <div id="resultado" class="hidden"></div>
+  </div>
+
+  <p class="text-center text-xs text-ink-soft/70 mt-4">
+    Tus respuestas nos ayudan a preparar tu diagnóstico. No compartimos tu información.
+  </p>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-white border-t border-sand">
+  <div class="max-w-6xl mx-auto px-5 py-6 flex flex-col md:flex-column items-center justify-center">
+    <div>
+      <img src="../imgs/lamesalab-logo.png" class="h-80 w-auto" alt="logo lamesalab">
+    </div>
+  </div>
+  <div class="text-center text-xs text-ink-soft/60 pb-8">© <span id="year"></span> lamesalab. Todos los derechos reservados.</div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/formulario.js"></script>
+
+<script>
+  const elementos = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  elementos.forEach((elemento) => {
+    observer.observe(elemento);
+  });
+</script>
+
+<!-- SCRIPT DEL ACCORDION -->
+<script>
+document.querySelectorAll('.acc-trigger').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const panel = document.getElementById(btn.dataset.target);
+    const icon = btn.querySelector('.acc-icon');
+    const isOpen = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+
+    // cierra los demás (acordeón exclusivo)
+    document.querySelectorAll('.acc-panel').forEach(p => p.style.maxHeight = '0px');
+    document.querySelectorAll('.acc-icon').forEach(i => i.classList.remove('rotate-180'));
+
+    if (!isOpen) {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      icon.classList.add('rotate-180');
+    }
+  });
+});
+</script>
+
+<!-- SCRIPT META PIXEL -->
+<script>!function(f,b,e,v,n,t,s)  
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1565688395308458');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1565688395308458&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+</body>
+</html>

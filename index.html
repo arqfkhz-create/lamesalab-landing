@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamesalab - Marketing y Consultoria para Restaurantes</title>
+    <meta name="facebook-domain-verification" content="fmfldtvb08dcl7pjgyxczxnsyrc61b" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2', 
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+                display: ['"Fraunces"', 'Georgia', 'serif'],
+            },
+        },
+      },
+    };
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+<header class="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-sand">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <img src="./imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto">
+    <div class="hidden md:flex items-center gap-8 text-sm font-500 text-ink-soft">
+      <a href="#quienes" class="hover:text-clay transition-colors">Quiénes somos</a>
+      <a href="#servicios" class="hover:text-clay transition-colors">Qué hacemos</a>
+      <a href="#como" class="hover:text-clay transition-colors">Cómo trabajamos</a>
+      <a href="#referencias" class="hover:text-clay transition-colors">Recursos</a>
+    </div>
+    
+  </nav>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section id="inicio" class="bg-cream relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5 pt-16 pb-18 md:pt-24 md:pb-18 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 rounded-full bg-sand text-ink-soft text-xs font-600 uppercase tracking-wider px-3 py-1.5 mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
+        Marketing y Consultoria para Restaurantes
+      </span>
+      <h1 class="font-display text-5xl sm:text-3xl lg:text-4xl font-600 leading-[1.05] tracking-tight text-balance justify-center">
+        Estrategia, marca y publicidad para negocios gastronómicos.
+      </h1>
+      <p class="mt-6 text-lg text-ink-soft leading-relaxed max-w-lg justify-center">Primero entendemos tu restaurante, tus números y tus clientes. Recién después definimos qué necesitás para crecer, sin invertir en lo que todavía no hace falta.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#diagnostico" class="inline-flex items-center justify-center gap-2 rounded-full bg-ink hover:bg-ink-soft text-cream font-600 px-7 py-3.5 transition-colors uppercase">
+          Diagnosticá tu negocio gratis
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+      <div class="mt-10 flex items-center gap-6 text-sm text-ink-soft">
+        <div><span class="font-display text-2xl font-600 text-ink">6+</span><br/>años de pizzería propia</div>
+        <div class="w-px h-10 bg-sand"></div>
+        <div><span class="font-display text-2xl font-600 text-ink">2</span><br/>arquitectos + economía urbana</div>
+      </div>
+    </div>
+
+    <!-- Siluetas placeholder de Marla y Frederick -->
+    <div class="relative">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-sand to-cream rounded-[2rem] rotate-2"></div>
+      <div class="relative bg-white/60 rounded-[2rem] border border-sand p-8 shadow-sm">
+        <div class="grid grid-cols-2 gap-6">
+          <!-- Persona 1 -->
+          <figure class="text-center">
+            <div class="aspect-[3/4] rounded-2xl bg-gradient-to-b from-sage/15 to-sage/5 flex items-end justify-center overflow-hidden">
+              <!-- SILUETA placeholder — reemplazar por foto de Marla -->
+              <svg viewBox="0 0 120 160" class="w-full h-full text-sage" role="img" aria-label="Silueta de Marla">
+                <circle cx="60" cy="46" r="26" fill="currentColor" opacity="0.9"/>
+                <path d="M18 160c0-30 18-52 42-52s42 22 42 52z" fill="currentColor" opacity="0.9"/>
+              </svg>
+            </div>
+            <figcaption class="mt-3">
+              <p class="font-display font-600 text-lg">Marla</p>
+              <p class="text-xs text-ink-soft">Arquitecta · Estrategia de marca & operación gastronómica</p>
+            </figcaption>
+          </figure>
+          <!-- Persona 2 -->
+          <figure class="text-center">
+            <div class="aspect-[3/4] rounded-2xl bg-gradient-to-b from-clay/15 to-clay/5 flex items-end justify-center overflow-hidden">
+              <!-- SILUETA placeholder — reemplazar por foto de Frederick -->
+              <svg viewBox="0 0 120 160" class="w-full h-full text-clay" role="img" aria-label="Silueta de Frederick">
+                <circle cx="60" cy="46" r="26" fill="currentColor" opacity="0.9"/>
+                <path d="M18 160c0-30 18-52 42-52s42 22 42 52z" fill="currentColor" opacity="0.9"/>
+              </svg>
+             </div>
+            <figcaption class="mt-3">
+              <p class="font-display font-600 text-lg">Frederick</p>
+              <p class="text-xs text-ink-soft">Arquitecto · Publicidad digital</p>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="mt-6 text-center text-xs text-ink-soft/70 italic">
+          * Siluetas temporales — reemplazables por sus fotos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECCIÓN DOLORES (ACCORDION) ================= -->
+<section class="bg-cream py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-sm font-semibold text-clay mb-3 uppercase">Lo que está frenando tu restaurante</div>
+    <h2 class="font-serif text-3xl md:text-4xl font-semibold text-ink mb-4" style="font-family:'Fraunces',Georgia,serif;">
+      Problemas reales de restaurantes <br> que nos encontramos en el camino.
+    </h2>
+    <p class="text-ink mb-12 max-w-xl">
+      Estos son los tres errores más comunes que fuimos trabajando.
+    </p>
+
+    <div class="space-y-3" id="dolores-accordion">
+
+      <!-- ITEM 1 -->
+      <div class="border border-[#4C3636]/15 rounded-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="acc-1">
+          <span class="font-serif text-lg font-semibold text-[#2a1f1f] pr-4" style="font-family:'Fraunces',Georgia,serif;">
+            ¿Tus martes y miércoles están vacíos?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="acc-1" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Plato fijo del día, activaciones puntuales y campañas segmentadas por horario (salida de colegio, almuerzo de oficina) — sin bajar precios ni entrenar al cliente a esperar descuento.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="border border-[#4C3636]/15 rounded-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="acc-2">
+          <span class="font-serif text-lg font-semibold text-[#2a1f1f] pr-4" style="font-family:'Fraunces',Georgia,serif;">
+            ¿Tienes clientes que compran una vez y no vuelven?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="acc-2" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed"> Instalamos el píxel y conectamos tu base de datos de clientes —los que ya compraron, los que dejaron el carrito, los que visitaron pero no siguieron— como la señal más valiosa que  puede tener Meta hoy. La segmentación manual de intereses ya no decide tanto; tus propios datos, sí. El tráfico que ya generaste deja de perderse después del primer contacto.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="border border-[#4C3636]/15 rounded-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="acc-3">
+          <span class="font-serif text-lg font-semibold text-[#2a1f1f] pr-4" style="font-family:'Fraunces',Georgia,serif;">
+            ¿Ya invertiste en publicidad y no viste resultado?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="acc-3" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Antes de lanzar campaña nueva, auditamos qué falló en el intento anterior: objetivo mal elegido, píxel mal instalado, o corte antes de tiempo. Después medimos con ventas reales cruzadas, no solo alcance o clics de la plataforma.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== CÓMO TRABAJAMOS ==================== -->
+<section id="como" class="bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 py-20">
+    <div class="max-w-2xl mb-12">
+      <span class="text-sm font-semibold text-clay-light mb-3 uppercase">Cómo trabajamos</span>
+      <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2 text-cream">Primero entendemos donde esta parado el restaurante, después armamos estrategia.</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-8">
+      <div>
+        <div class="font-display text-5xl font-600 text-clay-light">01</div>
+        <h3 class="font-600 text-lg mt-3">Diagnosticamos</h3>
+        <p class="mt-2 text-cream/70 leading-relaxed">Completás el formulario y entendemos en qué categoría estás y cuál es tu problema principal.</p>
+      </div>
+      <div>
+        <div class="font-display text-5xl font-600 text-clay-light">02</div>
+        <h3 class="font-600 text-lg mt-3">Te ubicamos</h3>
+        <p class="mt-2 text-cream/70 leading-relaxed">Te decimos con honestidad si conviene ordenar bases con herramientas gratuitas o si ya estás para escalar.</p>
+      </div>
+      <div>
+        <div class="font-display text-5xl font-600 text-clay-light">03</div>
+        <h3 class="font-600 text-lg mt-3">Avanzamos juntos</h3>
+        <p class="mt-2 text-cream/70 leading-relaxed">Definimos el plan a tu medida, con pasos concretos y métricas para saber si funciona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BLOG ==================== -->
+
+<section id=blog class="bg-cream py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="max-w-2xl mb-12">
+      <span class="text-sm font-semibold text-clay mb-3 uppercase">Recursos</span>
+      <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2 text-ink">Artículos y recursos para restaurantes.</h2>
+    </div>
+    <div id="lista-blog" class="grid sm:grid-cols-3 gap-8"></div>
+
+<script>
+fetch('/posts.json')
+  .then(r => r.json())
+  .then(posts => {
+    document.getElementById('lista-blog').innerHTML = posts.map(p => `
+      <a href="${p.url}" class="block rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+        ${p.imagen ? `<img src="${p.imagen}" alt="${p.titulo}" class="w-full h-[200px] object-cover">` : ''}
+        <div class="p-4">
+          <h3 class="font-semibold text-lg text-ink mb-2">${p.titulo}</h3>
+          <p class="text-sm text-ink-soft leading-relaxed">${p.resumen}</p>
+        </div>
+      </a>
+    `).join('');
+  });
+</script>
+  </div>
+  </section>
+
+
+
+
+
+<!-- SCRIPT DEL ACCORDION -->
+<script>
+document.querySelectorAll('.acc-trigger').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const panel = document.getElementById(btn.dataset.target);
+    const icon = btn.querySelector('.acc-icon');
+    const isOpen = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+
+    // cierra los demás (acordeón exclusivo)
+    document.querySelectorAll('.acc-panel').forEach(p => p.style.maxHeight = '0px');
+    document.querySelectorAll('.acc-icon').forEach(i => i.classList.remove('rotate-180'));
+
+    if (!isOpen) {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      icon.classList.add('rotate-180');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
