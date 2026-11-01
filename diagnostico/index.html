@@ -80,7 +80,7 @@
       </div>
     </div>
 
-    <section class="relative h-[80vh] overflow-hidden rounded-2xl">
+    <section class="relative h-[70vh] overflow-hidden bg-white rounded-3xl">
   <video id="hero-video"
          class="absolute inset-0 w-full h-full object-cover"
          poster="img/hero-poster.webp"
@@ -94,13 +94,6 @@
   <!-- Capa oscura para que el texto se lea -->
   <div class="absolute inset-0 bg-black/30"></div>
 
-  <!-- Contenido del hero -->
-  <div class="relative z-10 h-full flex flex-col justify-center px-6 max-w-3xl">
-    <h1 class="text-4xl md:text-6xl font-serif text-white">Tu título aquí</h1>
-    <a href="#diagnostico" class="mt-6 w-fit bg-[#E0301E] text-white px-6 py-3 rounded-lg font-semibold">
-      Diagnóstico gratis
-    </a>
-  </div>
 
   <!-- Botón de sonido -->
   <button id="btn-sonido" class="hidden absolute bottom-4 right-4 z-10 bg-white/90 text-[#2B211C] px-4 py-2 rounded-full text-sm font-semibold">
@@ -392,7 +385,9 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/animaciones.js"></script>
 <script src="../js/formulario.js"></script>
+
 
 <script>
   const elementos = document.querySelectorAll(".fade-in");
