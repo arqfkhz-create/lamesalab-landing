@@ -14,10 +14,12 @@
         extend: {
           colors: {
             ink:    { DEFAULT: '#756D67', soft: '#292524' },
-            cream:  '#e6e9d2', 
+            cream:  '#EBEDE1', 
+            dark:   '#3D3A2F',
             sand:   '#f0e9df',
-            clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
-            sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            clay:   { DEFAULT: '#df2c1e', dark: '#a1501f', light: '#ca8a04' },
+            sage:   { DEFAULT: '#bf9000', dark: '#2f5248' },
+            
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -49,7 +51,7 @@
 <header class="sticky top-0 z-40 bg-sand/40 backdrop-blur border-b border-sand">
   <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
     <img src="../imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto">
-    <a href="#diagnostico" class="inline-flex items-center gap-2 rounded-md bg-clay hover:bg-clay-dark text-white text-sm font-600 px-5 py-2.5 transition-colors">
+    <a href="#diagnostico" class="inline-flex items-center gap-2 rounded-md bg-clay hover:bg-dark text-white text-sm font-600 px-5 py-2.5 transition-colors">
       Diagnóstico gratis
     </a>
   </nav>
@@ -60,30 +62,59 @@
 <section id="inicio" class="bg-sand/40 relative overflow-hidden">
   <div class="max-w-6xl mx-auto px-5 pt-16 pb-18 md:pt-24 md:pb-18 grid md:grid-cols-2 gap-12 items-center">
     <div>
+      <span class="text-sm font-semibold text-sage mb-3 uppercase">Para negocios de comida en Puerto Rico y Buenos Aires</span>
       <h1 class="font-display text-4xl mt-5 sm:text-3xl lg:text-4xl font-600 leading-[1.05] tracking-tight text-balance justify-center">
-        <span class="text-clay">Más reservas, más pedidos y clientes que vuelven.</span> Primero auditamos tu restaurante en presencia digital; después gestionamos la publicidad.  
+        <span class="text-clay">Más reservas, más pedidos y clientes que vuelven.</span> Te ayudamos a mejorar tu presencia digital de tu negocio de comidas para aumentar las ventas.   
       </h1>
       <p class="mt-6 text-lg text-ink leading-relaxed max-w-lg justify-center">Primero entendemos tu restaurante, tus números y tus clientes. Recién después definimos qué necesitás para crecer — herramientas, estrategia o publicidad, cuando tenga sentido.</p>
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#diagnostico" class="inline-flex items-center justify-center gap-2 rounded-md bg-ink hover:bg-ink-soft text-cream font-600 px-7 py-3.5 transition-colors uppercase">
-          Solicitar consulta
+        <a href="#diagnostico" class="inline-flex items-center justify-center gap-2 rounded-md bg-sage hover:bg-clay text-cream font-600 px-7 py-3.5 transition-colors uppercase">
+          Diagnostico Gratuito
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
       </div>
       <div class="mt-10 flex items-center gap-6 text-sm text-ink-soft">
-        <div><span class="font-display text-2xl font-600 text-ink">6+</span><br/>años de pizzería propia</div>
+        <div><span class="font-display text-2xl font-600 text-ink">6+</span><br/>años dueños de Pizzeria La Rinconada en Buenos Aires</div>
         <div class="w-px h-10 bg-sand"></div>
-        <div><span class="font-display text-2xl font-600 text-ink">2</span><br/>arquitectos + economía urbana</div>
+        <div><span class="font-display text-2xl font-600 text-ink">10+</span><br/>años de manejo de negocios propios</div>
       </div>
     </div>
 
-    <!-- Siluetas placeholder de Marla y Frederick -->
-    <div class="relative">
-      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-sand to-cream rounded-[2rem] rotate-2"></div>
-      <div class="relative bg-white/60 rounded-[2rem] border border-sand p-8 shadow-sm">
-        <div class="grid grid-cols-2 gap-6">
+    <section class="relative h-[80vh] overflow-hidden rounded-2xl">
+  <video id="hero-video"
+         class="absolute inset-0 w-full h-full object-cover"
+         poster="img/hero-poster.webp"
+         muted playsinline preload="none"
+         controlslist="nodownload"
+         disablepictureinpicture
+         oncontextmenu="return false;">
+    <source src="../imgs/IMG_7847.MOV" type="video/mov">
+  </video>
+
+  <!-- Capa oscura para que el texto se lea -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- Contenido del hero -->
+  <div class="relative z-10 h-full flex flex-col justify-center px-6 max-w-3xl">
+    <h1 class="text-4xl md:text-6xl font-serif text-white">Tu título aquí</h1>
+    <a href="#diagnostico" class="mt-6 w-fit bg-[#E0301E] text-white px-6 py-3 rounded-lg font-semibold">
+      Diagnóstico gratis
+    </a>
+  </div>
+
+  <!-- Botón de sonido -->
+  <button id="btn-sonido" class="hidden absolute bottom-4 right-4 z-10 bg-white/90 text-[#2B211C] px-4 py-2 rounded-full text-sm font-semibold">
+    🔇 Activar sonido
+  </button>
+</section>
+
+    <!-- Siluetas de Marla y Fred -->
+    <!-- <div class="relative">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-dark/50 to-ink rounded-[2rem] rotate-3"></div>
+      <div class="relative bg-white/90 rounded-[2rem] border border-sand p-8 shadow-md">
+        <div class="grid grid-cols-2 gap-6">-->
           <!-- Persona 1 -->
-          <figure class="text-center">
+          <!--<figure class="text-center">
             <div class="aspect-[3/4] rounded-2xl bg-gradient-to-b from-sage/15 to-sage/5 flex items-end justify-center overflow-hidden">
               <img src="../imgs/marla.webp" alt="foto de Marla" class="w-full h-full object-cover object-top">
                 <circle cx="60" cy="46" r="26" fill="currentColor" opacity="0.9"/>
@@ -92,11 +123,11 @@
             </div>
             <figcaption class="mt-3">
               <p class="font-display font-600 text-lg">Marla</p>
-              <p class="text-xs text-ink-soft">Arquitecta · Asesora gastronómica · Ex-Dueña Restaurante · Chef Pastelera</p>
+              <p class="text-xs text-ink-soft">Arquitecta · Asesora gastronómica · Ex-Dueña Restaurante · Chef Pastelera · Especialista en Google Ads</p>
             </figcaption>
           </figure>
           <!-- Persona 2 -->
-          <figure class="text-center">
+          <!--<figure class="text-center">
             <div class="aspect-[3/4] rounded-2xl bg-gradient-to-b from-clay/15 to-clay/5 flex items-end justify-center overflow-hidden">
               <img src="../imgs/fred.webp" alt="foto de Marla" class="w-full h-full object-cover object-top scale-125">
                 <circle cx="60" cy="46" r="26" fill="currentColor" opacity="0.9"/>
@@ -105,23 +136,20 @@
              </div>
             <figcaption class="mt-3">
               <p class="font-display font-600 text-lg">Frederick</p>
-              <p class="text-xs text-ink-soft">Arquitecto · Publicidad digital · Ex-Dueño Restaurante · Programador</p>
+              <p class="text-xs text-ink-soft">Arquitecto · Publicidad digital · Ex-Dueño Restaurante · Programador · Especialista en Meta Ads</p>
             </figcaption>
           </figure>
         </div>
-        <p class="mt-6 text-center text-xs text-ink-soft/70 italic">
-          * Siluetas temporales — reemplazables por sus fotos.
-        </p>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <!-- ================= SECCIÓN DOLORES (ACCORDION) ================= -->
 
 <section class="bg-sand/40 py-24">
   <div class="max-w-6xl mx-auto px-5">
-    <div class="text-sm font-semibold text-clay mb-3 uppercase">Lo que está frenando tu restaurante</div>
+    <div class="text-sm font-semibold text-sage mb-3 uppercase">Lo que está frenando tu restaurante</div>
     <h2 class="font-display text-4xl sm:text-3xl lg:text-4xl font-600 leading-[1.05] tracking-tight text-balance">
       Problemas reales de restaurantes <br> que nos encontramos en el camino.
     </h2>
@@ -189,8 +217,8 @@
   <div class="max-w-6xl mx-auto px-5 py-12">
 
     <div class="max-w-5xl mb-14">
-      <span class="text-sm font-semibold text-clay uppercase">Nuestros servicios</span>
-      <h2 class="font-display text-4xl sm:text-3xl lg:text-4xl font-600 leading-[1.05] tracking-tight text-balance">
+      <span class="text-sm font-semibold text-sage uppercase">Nuestros servicios</span>
+      <h2 class="font-display text-ink text-4xl sm:text-3xl lg:text-4xl font-600 leading-[1.05] tracking-tight text-balance">
         Antes de la estrategia, entendemos tu negocio
       </h2>
       <p class="mt-4 text-ink text-lg">Completas el formulario y vemos en qué etapa está tu negocio y cuál es su problema principal. Te decimos con honestidad si te conviene ordenar las bases con herramientas gratuitas o si ya puedes escalar, y armamos un plan a tu medida con pasos concretos y métricas para saber si funciona.</p>
@@ -199,51 +227,45 @@
     <!-- Proyectos con entrega (1–3) -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
 
-      <!-- 01 · DIAGNÓSTICO -->
+      <!-- 01 DIAGNOSTICO GRATUITO  -->
       <article class="flex flex-col bg-white rounded-3xl border border-sand p-7 shadow-md">
         <div class="flex items-center justify-between">
           <span class="font-display text-4xl font-semibold text-clay">01</span>
-          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft bg-sand rounded-full px-3 py-1">Proyecto</span>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Proyecto</span>
         </div>
-        <h3 class="font-display text-2xl font-semibold mt-4">Diagnóstico Inicial</h3>
+        <h3 class="font-display text-2xl font-semibold mt-4">Diagnostico Gratuito</h3>
         <p class="mt-2 text-ink-soft leading-relaxed">Analizamos tu exposicion en redes.</p>
 
         <ul class="svc-list mt-6 space-y-3 text-[0.95rem] leading-relaxed">
-          <li><strong>Arquitectura del mensaje:</strong> propuesta de valor, producto ancla, ofertas y cómo te buscan.</li>
-          <li><strong>Ecosistema digital:</strong> medición, web, Google Business, reseñas, cuentas y accesos.</li>
-          <li><strong>Auditoría de campañas activas</strong> (si las hay): qué se pauta, cuánto se gasta, qué resultado da y qué se mide mal.</li>
+          <li><strong>Guía Presencia Digital:</strong> Guía práctica para negocios gastronómicos que quieren destacar en redes y en Google.</li>
+          <li><strong>Atención personalizada:</strong>Cada formulario lo leemos nosotros. Marla o Fred te responderán personalmente, porque cada emprendimiento es distinto. </li>
         </ul>
 
         <div class="mt-auto pt-6">
-          <div class="rounded-2xl bg-cream border border-sand p-4">
-            <p class="text-[11px] font-semibold uppercase tracking-wider text-sage">Entregable</p>
-            <p class="mt-1 text-sm">Documento con semáforos, los 3 ajustes más urgentes y la recomendación de canal.</p>
-          </div>
+          <a href="#diagnostico" class="flex w-full items-center gap-2 rounded-lg bg-sage hover:bg-dark text-white text-sm font-semibold px-6 py-3 transition-colors">Diagnostico Gratuito
+          <svg class="h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
           <p class="mt-3 text-xs text-ink-soft/80">No incluye tocar ninguna cuenta: solo se mira y se recomienda.</p>
         </div>
       </article>
 
-      <!-- 02 · PRESENCIA -->
+      <!-- 02 · PRESENCIA EN REDES-->
       <article class="flex flex-col bg-white rounded-3xl border border-sand p-7 shadow-md">
         <div class="flex items-center justify-between">
           <span class="font-display text-4xl font-semibold text-clay">02</span>
-          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft bg-sand rounded-full px-3 py-1">Incluye 01</span>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Incluye 01</span>
         </div>
-        <h3 class="font-display text-2xl font-semibold mt-4">Optimización de Presencia</h3>
-        <p class="mt-2 text-ink-soft leading-relaxed">Que todo lo que un cliente ve antes de elegirte esté completo, sea coherente con la marca y transmita confianza.</p>
+        <h3 class="font-display text-2xl font-semibold mt-4">Optimización de Presencia en Redes</h3>
+        <p class="mt-2 text-ink leading-relaxed">Que todo lo que un cliente ve antes de elegirte esté completo, sea coherente con la marca y transmita confianza.</p>
 
         <ul class="svc-list mt-6 space-y-3 text-[0.95rem] leading-relaxed">
           <li><strong>Google Business:</strong> categoría, horarios, fotos, menú, atributos, preguntas frecuentes y publicaciones.</li>
           <li><strong>Instagram:</strong> bio, destacadas, link y coherencia del feed con la marca.</li>
-          <li><strong>Meta Business:</strong> accesos a nombre del negocio, píxel y API de Conversiones.</li>
-          <li><strong>Reseñas:</strong> leemos los temas que se repiten en las negativas, respondemos las pendientes y armamos una plantilla de tono y un sistema para pedirlas (QR en mesa, mensaje post-pedido, el equipo en el momento justo).</li>
+          <li><strong>Meta:</strong> accesos a nombre del negocio, píxel y API de Conversiones.</li>
+          <li><strong>Reseñas:</strong> leemos los temas que se repiten en las negativas, revisamos las pendientes y armamos una plantilla de tono y un sistema para pedirlas.</li>
         </ul>
 
         <div class="mt-auto pt-6">
-          <div class="rounded-2xl bg-cream border border-sand p-4">
-            <p class="text-[11px] font-semibold uppercase tracking-wider text-sage">Entregable</p>
-            <p class="mt-1 text-sm">Cuentas configuradas, checklist en verde y protocolo de reseñas para el equipo.</p>
-          </div>
           <p class="mt-3 text-xs text-ink-soft/80">Las reseñas se piden, no se compran: Google prohíbe dar descuentos o regalos a cambio y puede borrarlas.</p>
         </div>
       </article>
@@ -253,10 +275,11 @@
         <span class="absolute -top-3 left-7 text-[11px] font-semibold uppercase tracking-wider text-white bg-clay rounded-full px-3 py-1">La más completa</span>
         <div class="flex items-center justify-between">
           <span class="font-display text-4xl font-semibold text-clay">03</span>
-          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft bg-sand rounded-full px-3 py-1">Incluye 01 + 02</span>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Incluye 01 + 02</span>
         </div>
-        <h3 class="font-display text-2xl font-semibold mt-4">Estrategia Integral <span class="text-ink-soft font-normal text-lg">· 3 meses</span></h3>
-        <p class="mt-2 text-ink-soft leading-relaxed">El plan completo: qué hacer, en qué canal y cuándo.</p>
+        <h3 class="font-display text-2xl font-semibold mt-4">Estrategia Integral</h3>
+        <p class="text-ink font-normal text-lg">Mínimo 3 meses</p>
+        <p class="mt-2 text-ink leading-relaxed">El plan estrategico completo: qué hacer, en qué canal y cuándo.</p>
 
         <ul class="svc-list mt-6 space-y-3 text-[0.95rem] leading-relaxed">
           <li><strong>Momentos de consumo:</strong> mapa de demanda, momentos flojos y ofertas para cada momento.</li>
@@ -264,39 +287,29 @@
           <li><strong>Plan de 3 meses:</strong> exploración, consolidación y optimización, con presupuesto sugerido por canal y por mes.</li>
           <li><strong>Ángulos creativos</strong> y ofertas sin descuento.</li>
         </ul>
-
-        <div class="mt-auto pt-6">
-          <div class="rounded-2xl bg-cream border border-sand p-4">
-            <p class="text-[11px] font-semibold uppercase tracking-wider text-sage">Entregable</p>
-            <p class="mt-1 text-sm">Plan estratégico listo para ejecutar, con nosotros o con otro equipo.</p>
-          </div>
-        </div>
       </article>
     </div>
 
-    <!-- 04 · CAMPAÑAS -->
+    <!-- 04 · LANZAMIENTO DE CAMPAÑAS Y TEMPORADAS -->
     <article class="mt-8 bg-white rounded-3xl p-7 md:p-10 grid md:grid-cols-[1.1fr_1fr] gap-8 items-center shadow-md">
       <div>
         <div class="flex items-center gap-3">
           <span class="font-display text-4xl font-semibold text-clay">04</span>
-          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink bg-cream rounded-full px-3 py-1">Fee por lanzamiento</span>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink rounded-full px-3 py-1">Fee por lanzamiento</span>
         </div>
-        <h3 class="font-display text-2xl md:text-3xl mt-4">Lanzamiento de Campañas</h3>
-        <p class="mt-2 leading-relaxed">Se planifica con anticipacion mediante calendario para obtener mejores resultados. Ideal para eventos, lanzamientos de menu nuevo</p>
+        <h3 class="font-display text-2xl md:text-3xl mt-4">Lanzamientos por Temporada</h3>
+        <p class="mt-2 leading-relaxed">Se planifica con anticipacion mediante calendario para obtener mejores resultados. Ideal para eventos, lanzamientos de menu nuevo, fechas especiales.</p>
       </div>
       <div class="space-y-4">
         <div class="rounded-2xl border border-dotted-1 border-sand p-4">
           <p class="text-[11px] font-semibold uppercase tracking-wider">Requisito</p>
-          <p class="mt-1 text-sm">Tener hecho el servicio 03, o al menos el 01 y el 02. Así nunca pautamos sobre una base rota.</p>
+          <p class="mt-1 text-sm">Tener campanas activas en Meta Ads.</p>
         </div>
         <div class="rounded-2xl border border-dotted-1 border-sand p-4">
           <p class="text-[11px] font-semibold uppercase tracking-wider">Inversión en anuncios</p>
           <p class="mt-1 text-sm">Va aparte y la pagás directo a Meta o Google.</p>
         </div>
-        <a href="#diagnostico" class="inline-flex items-center gap-2 rounded-lg bg-clay hover:bg-clay-dark text-white text-sm font-semibold px-6 py-3 transition-colors">
-          Empezá por el diagnóstico gratis
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-        </a>
+        
       </div>
     </article>
 
@@ -334,9 +347,10 @@
 <section class="bg-sand/40">
 <div id="diagnostico" class="max-w-6xl mx-auto px-5 py-20">
   <div class="text-start max-w-6xl mx-auto mb-10">
-    <span class="text-sm font-semibold text-clay mb-3 uppercase">Diagnóstico gratis · 2 min</span>
-    <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2">¿En qué momento está tu negocio gastronómico?</h2>
-    <p class="mt-4 text-ink-soft text-lg">Respondé unas preguntas y al final te decimos exactamente cuál es tu próximo paso.</p>
+    <span class="text-sm font-semibold text-sage mb-3 uppercase">Diagnóstico gratis · 2 min</span>
+    <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2">¿Cuál es el primer paso para que tu negocio de comida venda más?
+</h2>
+    <p class="mt-4 text-inktext-lg">Responde el formulario y en 3 minutos te decimos exactamente cuál es tu próximo paso.</p>
   </div>
 
   <div class="bg-white rounded-3xl border border-sand shadow-sm p-6 sm:p-9">
