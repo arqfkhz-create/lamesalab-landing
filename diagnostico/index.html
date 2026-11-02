@@ -77,26 +77,24 @@
       </div>
     </div>
 
- <div class="relative h-[70vh] overflow-hidden rounded-3xl">
-      <video id="hero-video"
-             class="absolute inset-0 w-full h-full object-cover"
-             poster="..//imgs/foto-cover-video-hero.jpeg"
-             muted playsinline preload="none"
-             controlslist="nodownload"
-             disablepictureinpicture
-             oncontextmenu="return false;">
-         <source src="https://res.cloudinary.com/jxwbc5i6/video/upload/vc_h264,q_auto,w_720/IMG_7847.mp4" type="video/mp4">
-      </video>
+    <div class="bg-white p-1 rounded-3xl shadow-md">
+      <div class="relative h-[70vh] overflow-hidden rounded-3xl">
+          <video id="hero-video"
+            class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+            poster="../imgs/foto-cover-video-hero.jpeg"
+            playsinline preload="metadata"
+            controlslist="nodownload"
+            disablepictureinpicture
+            oncontextmenu="return false;">
+            <source src="https://res.cloudinary.com/jxwbc5i6/video/upload/vc_h264,q_auto,w_720/IMG_7847.mp4" type="video/mp4">
+          </video>
 
-      <button id="btn-play-hero" class="hidden absolute inset-0 z-10 flex items-center justify-center">
-        <span class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center text-3xl text-[#2B211C] shadow-lg">▶</span>
-      </button>
-
-      <button id="btn-sonido" class="hidden absolute bottom-4 right-4 z-10 bg-white/90 text-[#2B211C] px-4 py-2 rounded-full text-sm font-semibold">
-        🔇 Activar sonido
-      </button>
+          <button id="btn-play-hero" type="button" aria-label="Reproducir video"
+            class="absolute inset-0 z-10 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors">
+            <span class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center text-3xl text-[#2B211C] shadow-lg pl-1">▶</span>
+          </button>
+      </div>
     </div>
-  </div> 
 
     <!-- Siluetas de Marla y Fred -->
     <!-- <div class="relative">
@@ -387,7 +385,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="../js/animaciones.js"></script>
+>
 <script src="../js/formulario.js"></script>
 
 
@@ -450,41 +448,23 @@ document.querySelectorAll('.acc-trigger').forEach(btn => {
 
 <!-- Script Video Hero -->
 <script>
-  const heroVideo = document.getElementById('hero-video');
-  const btnSonido = document.getElementById('btn-sonido');
-  const btnPlay = document.getElementById('btn-play-hero');
-  let heroVisto = false;
-  try { heroVisto = localStorage.getItem('heroVisto') === '1'; } catch (e) {}
+(function () {
+  const video = document.getElementById("hero-video");
+  const btnPlay = document.getElementById("btn-play-hero");
 
-  function reproducir() {
-    btnPlay.classList.add('hidden');
-    btnSonido.classList.remove('hidden');
-    return heroVideo.play();
-  }
+  btnPlay.addEventListener("click", () => video.play());
 
-  if (!heroVisto) {
-    heroVideo.preload = 'auto';
-    reproducir().catch(() => {
-      // El celular bloqueó el autoplay: mostramos el botón de play
-      btnSonido.classList.add('hidden');
-      btnPlay.classList.remove('hidden');
-    });
-
-    heroVideo.addEventListener('ended', () => {
-      try { localStorage.setItem('heroVisto', '1'); } catch (e) {}
-      btnSonido.classList.add('hidden');
-      heroVideo.load();
-    });
-  }
-
-  btnPlay.addEventListener('click', () => {
-    reproducir().catch(() => {});
+  video.addEventListener("click", () => {
+    if (!video.paused) video.pause();
   });
 
-  btnSonido.addEventListener('click', () => {
-    heroVideo.muted = !heroVideo.muted;
-    btnSonido.textContent = heroVideo.muted ? '🔇 Activar sonido' : '🔊 Silenciar';
+  video.addEventListener("play", () => btnPlay.classList.add("hidden"));
+  video.addEventListener("pause", () => btnPlay.classList.remove("hidden"));
+  video.addEventListener("ended", () => {
+    video.load(); // vuelve a mostrar el poster
+    btnPlay.classList.remove("hidden");
   });
+})();
 </script>
 
 </body>
