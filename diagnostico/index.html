@@ -80,13 +80,17 @@
  <div class="relative h-[70vh] overflow-hidden rounded-3xl">
       <video id="hero-video"
              class="absolute inset-0 w-full h-full object-cover"
-             poster="https://res.cloudinary.com/jxwbc5i6/video/upload/so_2,w_720,q_auto/IMG_7847.jpg"
+             poster="..//imgs/foto-cover-video-hero.jpeg"
              muted playsinline preload="none"
              controlslist="nodownload"
              disablepictureinpicture
              oncontextmenu="return false;">
          <source src="https://res.cloudinary.com/jxwbc5i6/video/upload/vc_h264,q_auto,w_720/IMG_7847.mp4" type="video/mp4">
       </video>
+
+      <button id="btn-play-hero" class="hidden absolute inset-0 z-10 flex items-center justify-center">
+        <span class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center text-3xl text-[#2B211C] shadow-lg">▶</span>
+      </button>
 
       <button id="btn-sonido" class="hidden absolute bottom-4 right-4 z-10 bg-white/90 text-[#2B211C] px-4 py-2 rounded-full text-sm font-semibold">
         🔇 Activar sonido
@@ -228,10 +232,10 @@
         </ul>
 
         <div class="mt-auto pt-6">
-          <a href="#diagnostico" class="flex w-full items-center gap-2 rounded-lg bg-sage hover:bg-dark text-white text-sm font-semibold px-6 py-3 transition-colors">Diagnostico Gratuito
+          <p class="mb-3 text-xs text-center text-ink-soft/80">No incluye tocar ninguna cuenta: solo se mira y se recomienda.</p>
+          <a href="#diagnostico" class="flex w-full justify-center gap-2 rounded-lg bg-sage hover:bg-dark text-white text-sm font-semibold px-6 py-3 transition-colors">Diagnostico Gratuito
           <svg class="h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
-          <p class="mt-3 text-xs text-ink-soft/80">No incluye tocar ninguna cuenta: solo se mira y se recomienda.</p>
         </div>
       </article>
 
@@ -252,7 +256,7 @@
         </ul>
 
         <div class="mt-auto pt-6">
-          <p class="mt-3 text-xs text-ink-soft/80">Las reseñas se piden, no se compran: Google prohíbe dar descuentos o regalos a cambio y puede borrarlas.</p>
+          <p class="flex justify-center w-full items-center gap-2 rounded-lg border border-sage text-sage text-md font-semibold px-6 py-3">precio desde 150usd</p>
         </div>
       </article>
 
@@ -273,6 +277,11 @@
           <li><strong>Plan de 3 meses:</strong> exploración, consolidación y optimización, con presupuesto sugerido por canal y por mes.</li>
           <li><strong>Ángulos creativos</strong> y ofertas sin descuento.</li>
         </ul>
+
+        <div class="mt-auto pt-6">
+          <p class="flex justify-center w-full items-center gap-2 rounded-lg border border-clay text-clay text-md font-semibold px-6 py-3">precio desde 300usd</p>
+        </div>
+
       </article>
     </div>
 
@@ -333,10 +342,10 @@
 <section class="bg-sand/40">
 <div id="diagnostico" class="max-w-6xl mx-auto px-5 py-20">
   <div class="text-start max-w-6xl mx-auto mb-10">
-    <span class="text-sm font-semibold text-sage mb-3 uppercase">Diagnóstico gratis · 2 min</span>
-    <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2">¿Cuál es el primer paso para que tu negocio de comida venda más?
+    <span class="text-sm font-semibold text-sage mb-3 uppercase">Paso 1 de tu diagnóstico gratis · 2 min</span>
+    <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2">Empecemos por conocer tu negocio de comidas. 
 </h2>
-    <p class="mt-4 text-inktext-lg">Responde el formulario y en 3 minutos te decimos exactamente cuál es tu próximo paso.</p>
+    <p class="mt-4 text-ink text-lg">Responde unas preguntas y te decimos cuál es tu próximo paso. Si ya estás listo para publicar, te contactamos en menos de 24 horas.</p>
   </div>
 
   <div class="bg-white rounded-3xl border border-sand shadow-sm p-6 sm:p-9">
@@ -443,13 +452,23 @@ document.querySelectorAll('.acc-trigger').forEach(btn => {
 <script>
   const heroVideo = document.getElementById('hero-video');
   const btnSonido = document.getElementById('btn-sonido');
+  const btnPlay = document.getElementById('btn-play-hero');
   let heroVisto = false;
   try { heroVisto = localStorage.getItem('heroVisto') === '1'; } catch (e) {}
 
+  function reproducir() {
+    btnPlay.classList.add('hidden');
+    btnSonido.classList.remove('hidden');
+    return heroVideo.play();
+  }
+
   if (!heroVisto) {
     heroVideo.preload = 'auto';
-    heroVideo.play().catch(() => {});
-    btnSonido.classList.remove('hidden');
+    reproducir().catch(() => {
+      // El celular bloqueó el autoplay: mostramos el botón de play
+      btnSonido.classList.add('hidden');
+      btnPlay.classList.remove('hidden');
+    });
 
     heroVideo.addEventListener('ended', () => {
       try { localStorage.setItem('heroVisto', '1'); } catch (e) {}
@@ -457,6 +476,10 @@ document.querySelectorAll('.acc-trigger').forEach(btn => {
       heroVideo.load();
     });
   }
+
+  btnPlay.addEventListener('click', () => {
+    reproducir().catch(() => {});
+  });
 
   btnSonido.addEventListener('click', () => {
     heroVideo.muted = !heroVideo.muted;
