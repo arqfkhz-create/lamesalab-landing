@@ -28,9 +28,6 @@
         },
       },
     };
-    
-
-
   </script>
 
   <!-- Fuentes -->
@@ -80,26 +77,22 @@
       </div>
     </div>
 
-    <section class="relative h-[70vh] overflow-hidden bg-white rounded-3xl">
-  <video id="hero-video"
-         class="absolute inset-0 w-full h-full object-cover"
-         poster="img/hero-poster.webp"
-         muted playsinline preload="none"
-         controlslist="nodownload"
-         disablepictureinpicture
-         oncontextmenu="return false;">
-    <source src="../imgs/IMG_7847.MOV" type="video/mov">
-  </video>
+ <div class="relative h-[70vh] overflow-hidden rounded-3xl">
+      <video id="hero-video"
+             class="absolute inset-0 w-full h-full object-cover"
+             poster="https://res.cloudinary.com/jxwbc5i6/video/upload/so_2,w_720,q_auto/IMG_7847.jpg"
+             muted playsinline preload="none"
+             controlslist="nodownload"
+             disablepictureinpicture
+             oncontextmenu="return false;">
+         <source src="https://res.cloudinary.com/jxwbc5i6/video/upload/vc_h264,q_auto,w_720/IMG_7847.mp4" type="video/mp4">
+      </video>
 
-  <!-- Capa oscura para que el texto se lea -->
-  <div class="absolute inset-0 bg-black/30"></div>
-
-
-  <!-- Botón de sonido -->
-  <button id="btn-sonido" class="hidden absolute bottom-4 right-4 z-10 bg-white/90 text-[#2B211C] px-4 py-2 rounded-full text-sm font-semibold">
-    🔇 Activar sonido
-  </button>
-</section>
+      <button id="btn-sonido" class="hidden absolute bottom-4 right-4 z-10 bg-white/90 text-[#2B211C] px-4 py-2 rounded-full text-sm font-semibold">
+        🔇 Activar sonido
+      </button>
+    </div>
+  </div> 
 
     <!-- Siluetas de Marla y Fred -->
     <!-- <div class="relative">
@@ -446,6 +439,30 @@ document.querySelectorAll('.acc-trigger').forEach(btn => {
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+<!-- Script Video Hero -->
+<script>
+  const heroVideo = document.getElementById('hero-video');
+  const btnSonido = document.getElementById('btn-sonido');
+  let heroVisto = false;
+  try { heroVisto = localStorage.getItem('heroVisto') === '1'; } catch (e) {}
+
+  if (!heroVisto) {
+    heroVideo.preload = 'auto';
+    heroVideo.play().catch(() => {});
+    btnSonido.classList.remove('hidden');
+
+    heroVideo.addEventListener('ended', () => {
+      try { localStorage.setItem('heroVisto', '1'); } catch (e) {}
+      btnSonido.classList.add('hidden');
+      heroVideo.load();
+    });
+  }
+
+  btnSonido.addEventListener('click', () => {
+    heroVideo.muted = !heroVideo.muted;
+    btnSonido.textContent = heroVideo.muted ? '🔇 Activar sonido' : '🔊 Silenciar';
+  });
+</script>
 
 </body>
 </html>
