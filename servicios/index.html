@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamesalab - Nuestros Servicios</title>
+    <meta name="facebook-domain-verification" content="fmfldtvb08dcl7pjgyxczxnsyrc61b" />
+
+  
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2', 
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
+                sans: ['"Roboto Slab"', 'Georgia', 'sans-serif'],
+                display: ['"Fraunces"', 'Georgia', 'serif'],
+            },
+        },
+      },
+    };
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  
+<header class="sticky top-0 z-40 bg-sand/40 backdrop-blur border-b border-sand">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="/"><img src="/imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto"></a>
+
+    <!-- Menú de escritorio (desde 1024 px) -->
+    <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+      <a href="/servicios/" class="hover:text-clay transition-colors">Servicios</a>
+      <a href="/recursos/" class="hover:text-clay transition-colors">Recursos</a>
+      <a href="/quienes-somos/" class="hover:text-clay transition-colors">Quienes Somos</a>
+      <a href="/faq/" class="hover:text-clay transition-colors">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-2.5 transition-colors">Diagnóstico gratis</a>
+    </div>
+
+    <!-- Botón hamburguesa (celular y iPad) -->
+    <button id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"
+            class="lg:hidden p-2 -mr-2 text-ink-soft">
+      <svg id="icono-abrir" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="icono-cerrar" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú desplegable (celular y iPad) -->
+  <div id="menu-movil" class="hidden lg:hidden border-t border-sand bg-cream">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col text-ink-soft font-medium">
+      <a href="/servicios/" class="py-3 border-b border-sand">Servicios</a>
+      <a href="/recursos/" class="py-3 border-b border-sand">Recursos</a>
+      <a href="/quienes-somos/" class="py-3 border-b border-sand">Quienes Somos</a>
+      <a href="/faq/" class="py-3 border-b border-sand">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="mt-4 rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-3 text-center transition-colors">Diagnóstico gratis</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ==================== NUESTROS SERVICIOS ==================== -->
+<section id="servicios" class="bg-sand/40">
+  <div class="max-w-6xl mx-auto px-5 py-12">
+
+    <div class="max-w-5xl mb-14">
+      <span class="text-sm font-semibold text-sage uppercase">Nuestros servicios</span>
+      <h2 class="font-display text-ink text-4xl sm:text-3xl lg:text-4xl font-600 leading-[1.05] tracking-tight text-balance">
+        Antes de la estrategia, entendemos tu negocio
+      </h2>
+      <p class="mt-4 text-ink text-lg">Completas el formulario y vemos en qué etapa está tu negocio y cuál es su problema principal. Te decimos con honestidad si te conviene ordenar las bases con herramientas gratuitas o si ya puedes escalar, y armamos un plan a tu medida con pasos concretos y métricas para saber si funciona.</p>
+    </div>
+
+    <!-- Proyectos con entrega (1–3) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+
+      <!-- 01 DIAGNOSTICO GRATUITO  -->
+      <article class="flex flex-col bg-white rounded-3xl border border-sand p-7 shadow-md">
+        <div class="flex items-center justify-between">
+          <span class="font-display text-4xl font-semibold text-clay">01</span>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Proyecto</span>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mt-4">Diagnostico Gratuito</h3>
+        <p class="mt-2 text-ink-soft leading-relaxed">Analizamos tu exposicion en redes.</p>
+
+        <ul class="svc-list mt-6 space-y-3 text-[0.95rem] leading-relaxed">
+          <li><strong>Guía Presencia Digital:</strong> Guía práctica para negocios gastronómicos que quieren destacar en redes y en Google.</li>
+          <li><strong>Atención personalizada:</strong>Cada formulario lo leemos nosotros. Marla o Fred te responderán personalmente, porque cada emprendimiento es distinto. </li>
+        </ul>
+
+        <div class="mt-auto pt-6">
+          <p class="mb-3 text-xs text-center text-ink-soft/80">No incluye tocar ninguna cuenta: solo se mira y se recomienda.</p>
+          <a href="#diagnostico" class="flex w-full justify-center gap-2 rounded-lg bg-sage hover:bg-dark text-white text-sm font-semibold px-6 py-3 transition-colors">Diagnostico Gratuito
+          <svg class="h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        </div>
+      </article>
+
+      <!-- 02 · PRESENCIA EN REDES-->
+      <article class="flex flex-col bg-white rounded-3xl border border-sand p-7 shadow-md">
+        <div class="flex items-center justify-between">
+          <span class="font-display text-4xl font-semibold text-clay">02</span>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Incluye 01</span>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mt-4">Optimización de Presencia en Redes</h3>
+        <p class="mt-2 text-ink leading-relaxed">Que todo lo que un cliente ve antes de elegirte esté completo, sea coherente con la marca y transmita confianza.</p>
+
+        <ul class="svc-list mt-6 space-y-3 text-[0.95rem] leading-relaxed">
+          <li><strong>Google Business:</strong> categoría, horarios, fotos, menú, atributos, preguntas frecuentes y publicaciones.</li>
+          <li><strong>Instagram:</strong> bio, destacadas, link y coherencia del feed con la marca.</li>
+          <li><strong>Meta:</strong> accesos a nombre del negocio, píxel y API de Conversiones.</li>
+          <li><strong>Reseñas:</strong> leemos los temas que se repiten en las negativas, revisamos las pendientes y armamos una plantilla de tono y un sistema para pedirlas.</li>
+        </ul>
+
+        <div class="mt-auto pt-6">
+          <p class="flex justify-center w-full items-center gap-2 rounded-lg border border-sage text-sage text-md font-semibold px-6 py-3">precio desde 150usd</p>
+        </div>
+      </article>
+
+      <!-- 03 · ESTRATEGIA (destacada) -->
+      <article class="relative flex flex-col bg-white rounded-3xl border-2 border-clay p-7 shadow-md md:col-span-2 lg:col-span-1">
+        <span class="absolute -top-3 left-7 text-[11px] font-semibold uppercase tracking-wider text-white bg-clay rounded-full px-3 py-1">La más completa</span>
+        <div class="flex items-center justify-between">
+          <span class="font-display text-4xl font-semibold text-clay">03</span>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Incluye 01 + 02</span>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mt-4">Estrategia Integral</h3>
+        <p class="text-ink font-normal text-lg">Mínimo 3 meses</p>
+        <p class="mt-2 text-ink leading-relaxed">El plan estrategico completo: qué hacer, en qué canal y cuándo.</p>
+
+        <ul class="svc-list mt-6 space-y-3 text-[0.95rem] leading-relaxed">
+          <li><strong>Momentos de consumo:</strong> mapa de demanda, momentos flojos y ofertas para cada momento.</li>
+          <li><strong>Elección y orden de canales:</strong> Meta Ads, Google Ads, SEO local y GEO.</li>
+          <li><strong>Plan de 3 meses:</strong> exploración, consolidación y optimización, con presupuesto sugerido por canal y por mes.</li>
+          <li><strong>Ángulos creativos</strong> y ofertas sin descuento.</li>
+        </ul>
+
+        <div class="mt-auto pt-6">
+          <p class="flex justify-center w-full items-center gap-2 rounded-lg border border-clay text-clay text-md font-semibold px-6 py-3">precio desde 300usd</p>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- 04 · LANZAMIENTO DE CAMPAÑAS Y TEMPORADAS -->
+    <article class="mt-8 bg-white rounded-3xl p-7 md:p-10 grid md:grid-cols-[1.1fr_1fr] gap-8 items-center shadow-md">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="font-display text-4xl font-semibold text-clay">04</span>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink rounded-full px-3 py-1">Fee por lanzamiento</span>
+        </div>
+        <h3 class="font-display text-2xl md:text-3xl mt-4">Lanzamientos por Temporada</h3>
+        <p class="mt-2 leading-relaxed">Se planifica con anticipacion mediante calendario para obtener mejores resultados. Ideal para eventos, lanzamientos de menu nuevo, fechas especiales.</p>
+      </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-dotted-1 border-sand p-4">
+          <p class="text-[11px] font-semibold uppercase tracking-wider">Requisito</p>
+          <p class="mt-1 text-sm">Tener campanas activas en Meta Ads.</p>
+        </div>
+        <div class="rounded-2xl border border-dotted-1 border-sand p-4">
+          <p class="text-[11px] font-semibold uppercase tracking-wider">Inversión en anuncios</p>
+          <p class="mt-1 text-sm">Va aparte y la pagás directo a Meta o Google.</p>
+        </div>
+        
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==================== CÓMO TRABAJAMOS ==================== -->
+
+<section id="como" class="bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 py-20">
+    <div class="max-w-2xl mb-12">
+      <span class="text-sm font-semibold text-clay-light mb-3 uppercase">Cómo trabajamos</span>
+      <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2 text-cream">Primero entendemos donde esta parado el restaurante, después armamos estrategia.</h2>
+      <p>Una campaña bien armada sobre un negocio que todavía no está listo gasta el presupuesto igual. Por eso empezamos mirando el negocio y no el anuncio.</p>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-8">
+      <div>
+        <div class="font-display text-5xl font-600 text-clay-light">01</div>
+        <h3 class="font-600 text-2xl mt-3">Diagnosticamos</h3>
+        <p class="my-3 text-cream/70 leading-relaxed">Completas el diagnóstico gratis y revisamos las tres bases que sostienen cualquier anuncio:</p>
+        <ul class="flex flex-col gap-3 leading-relaxed">
+          <li class="flex gap-2"><span class="text-gold">✓</span><span><strong>Mensaje:</strong> qué cuenta tu negocio y a quién se lo cuenta.</span></li>
+          <li class="flex gap-2"><span class="text-gold">✓</span><span><strong>Momentos de consumo:</strong> cuándo te eligen (almuerzo, cena, delivery) y qué día queda flojo.</span></li>
+          <li class="flex gap-2"><span class="text-gold">✓</span><span><strong>Ecosistema digital:</strong> ficha de Google, WhatsApp, link de pedidos y píxel.</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-display text-5xl font-600 text-clay-light">02</div>
+        <h3 class="font-600 text-2xl mt-3">Te ubicamos</h3>
+        <p class="my-3 text-cream/70 leading-relaxed">Te decimos con honestidad qué toca ahora. La publicidad hace llegar una razón para ir que ya existe, no la inventa, así que a veces el primer paso no es pautar.</p>
+        <ul class="flex flex-col gap-3 leading-relaxed">
+          <li class="flex gap-2"><span class="text-gold">✓</span><span>Ordernar las bases con herramientas gratuitas</span></li>
+          <li class="flex gap-2"><span class="text-gold">✓</span><span>Armar la presencia digital (Google, píxel, WhatsApp) antes de invertir.</span></li>
+          <li class="flex gap-2"><span class="text-gold">✓</span><span>Pasar a campañas, si ya estás listo.</span></li>
+          <li class="flex gap-2"><span class="text-gold">✓</span><span>Revisar la carta, los costos o la operación con consultoría gastronómica, si el problema está en el negocio y no en los anuncios.</span>
+      </div>
+      <div>
+        <div class="font-display text-5xl font-600 text-clay-light">03</div>
+        <h3 class="font-600 text-2xl mt-3">Avanzamos juntos</h3>
+        <p class="my-3 text-cream/70 leading-relaxed">Trabajamos en ciclos de tres meses, porque una campaña necesita tiempo para aprender antes de juzgarla:</p>
+        <ul class="flex flex-col gap-3 leading-relaxed">
+          <li class="flex gap-2"><span class="text-gold">✓</span><span><strong>Explotación:</strong> probamos creativos distintos e instalamos la medición.</span></li>
+          <li class="flex gap-2"><span class="text-gold">✓</span><span><strong>Consolidación:</strong> concentramos la inversión en lo que ganó y activamos el remarketing.</span></li>
+          <li class="flex gap-2"><span class="text-gold">✓</span><span><strong>Optimización: </strong>decidimos enconjunto con el cliente qué se sostiene y qué se corta.</span></li>
+        </ul>
+        <ul class="mt-3 flex flex-col gap-3 leading-relaxed"><span>Tú recibes:</span>
+          <li>Un plan con pasos concretos y números que importan: mesas, pedidos, mensajes y costo por resultado.</li>
+          <li>Para llenar un día flojo buscamos una razón para ir que no toque el precio. No prometemos resultados ni cifras antes de conocer tu negocio.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-sand/40 border-t border-sand">
+  <div class="max-w-6xl mx-auto px-5 py-6 flex flex-col md:flex-column items-center justify-center">
+    <div>
+      <img src="../imgs/lamesalab-logo.png" class="h-80 w-auto" alt="logo lamesalab">
+    </div>
+  </div>
+  <div class="text-center text-xs text-ink-soft/60 pb-8">© <span id="year"></span> lamesalab. Todos los derechos reservados.</div>
+</footer>
+
+<script src="/js/menu.js"></script>
+
+</body>
