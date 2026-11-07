@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamesalab - Quiénes Somos</title>
+    <meta name="description" content="Somos Marla y Fred, ex dueños de Pizzería La Rinconada en Buenos Aires. Ayudamos a negocios de comida en Puerto Rico y Buenos Aires a mejorar su presencia digital y vender más.">
+    <meta name="facebook-domain-verification" content="fmfldtvb08dcl7pjgyxczxnsyrc61b" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2',
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
+                sans: ['"Roboto Slab"', 'Georgia', 'sans-serif'],
+                display: ['"Fraunces"', 'Georgia', 'serif'],
+            },
+        },
+      },
+    };
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+
+<header class="sticky top-0 z-40 bg-sand/40 backdrop-blur border-b border-sand">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="/"><img src="/imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto"></a>
+
+    <!-- Menú de escritorio (desde 1024 px) -->
+    <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+      <a href="/servicios" class="hover:text-clay transition-colors">Servicios</a>
+      <a href="/recursos" class="hover:text-clay transition-colors">Recursos</a>
+      <a href="/quienes-somos" aria-current="page" class="text-clay transition-colors">Quienes Somos</a>
+      <a href="/faq" class="hover:text-clay transition-colors">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-2.5 transition-colors">Diagnóstico gratis</a>
+    </div>
+
+    <!-- Botón hamburguesa (celular y iPad) -->
+    <button id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"
+            class="lg:hidden p-2 -mr-2 text-ink-soft">
+      <svg id="icono-abrir" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="icono-cerrar" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú desplegable (celular y iPad) -->
+  <div id="menu-movil" class="hidden lg:hidden border-t border-sand bg-cream">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col text-ink-soft font-medium">
+      <a href="/servicios/" class="py-3 border-b border-sand">Servicios</a>
+      <a href="/recursos/" class="py-3 border-b border-sand">Recursos</a>
+      <a href="/quienes-somos/" aria-current="page" class="py-3 border-b border-sand text-clay">Quienes Somos</a>
+      <a href="/faq/" class="py-3 border-b border-sand">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="mt-4 rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-3 text-center transition-colors">Diagnóstico gratis</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ==================== HERO: PORTADA DE DIARIO ==================== -->
+<section id="historia" class="bg-sand/40 border-b border-ink-soft/20">
+  <article class="max-w-6xl mx-auto px-5 py-8 md:py-12">
+
+    <!-- Cabezal del diario -->
+    <div class="text-center">
+      <div class="flex justify-center sm:justify-between gap-4 pb-2 border-b border-ink-soft/40 text-[11px] font-semibold uppercase tracking-wider text-ink-soft">
+        <span>Buenos Aires · Puerto Rico</span>
+        <span class="hidden md:inline">Edición especial: quiénes somos</span>
+        <span class="hidden sm:inline">Localizacion Actual: En el Calentón</span>
+      </div>
+      <img src="/imgs/lamesalab-logo.png" class="h-80 w-autor mx-auto" alt="logo lamesalab">
+      <p class="py-2 border-y-4 border-double border-ink-soft/70 text-[10px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-[0.2em] text-ink-soft">Marketing y consultoría para restaurantes</p>
+    </div>
+
+    <!-- Titular -->
+    <div class="max-w-4xl mx-auto text-center mt-10 md:mt-12">
+      <span class="text-sm font-semibold text-sage uppercase">Nuestra historia</span>
+      <h1 class="font-display text-ink-soft text-4xl sm:text-5xl lg:text-7xl mt-3 leading-[1.02] tracking-tight text-balance">Estudiamos arquitectura. Una pizzería nos enseñó el resto.</h1>
+      <p class="mt-5 font-display italic text-clay text-xl md:text-2xl text-balance">Antes de asesorar restaurantes, tuvimos el nuestro.</p>
+      <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-ink-soft">Por Marla y Fred</p>
+    </div>
+
+    <!-- Foto principal y columna lateral -->
+    <div class="mt-10 grid lg:grid-cols-3 gap-8">
+      <figure class="lg:col-span-2">
+        <img src="/imgs/marla-y-fred.jpeg" alt="Marla y Fred sentados a una mesa de madera, sonriendo" width="1521" height="1050" class="w-full h-auto">
+        <figcaption class="mt-2 text-sm italic text-ink-soft">Marla y Fred, las dos caras detrás de lamesalab.</figcaption>
+      </figure>
+
+      <aside class="lg:pl-8 lg:border-l border-ink-soft/20">
+        <p class="text-lg leading-relaxed">Lamesalab nace de haber estado del otro lado del mostrador. Ayudamos a negocios de comida en Puerto Rico y Buenos Aires a mejorar su presencia digital y a vender más, empezando siempre por entender el negocio.</p>
+        <div class="mt-5 py-4 border-y border-ink-soft/30 grid grid-cols-2 gap-5 text-sm text-ink-soft">
+          <div><span class="font-display text-3xl font-semibold text-ink">6+</span><br/>años dueños de Pizzería La Rinconada</div>
+          <div><span class="font-display text-3xl font-semibold text-ink">10+</span><br/>años de manejo de negocios propios</div>
+        </div>
+        <figure class="mt-5">
+          <img src="/imgs/la-rinconada-frente.jpeg" alt="Clientes sentados en las mesas de la vereda, frente a la pizzería La Rinconada, de noche" width="800" height="500" class="w-full h-auto grayscale">
+          <figcaption class="mt-2 text-sm italic text-ink-soft">Pizzería La Rinconada, Buenos Aires.</figcaption>
+        </figure>
+      </aside>
+    </div>
+
+    <!-- El relato, a columnas -->
+    <div class="mt-10 pt-8 border-t-4 border-double border-ink-soft/70 md:columns-2 lg:columns-3 gap-10 [column-rule:1px_solid_rgba(41,37,36,0.2)] md:text-justify md:hyphens-auto">
+
+      <h2 class="font-display text-ink-soft text-2xl font-semibold leading-tight text-left break-after-avoid">La obra que no estaba en los planos</h2>
+      <p class="mt-3 leading-relaxed first-letter:float-left first-letter:font-display first-letter:text-6xl first-letter:leading-[0.85] first-letter:mr-2 first-letter:text-clay">Somos arquitectos, pero durante más de seis años nuestra obra fue otra: Pizzería La Rinconada, en Buenos Aires. Cambiamos los planos por el horno, la carta y las cuentas de fin de mes.</p>
+      <p class="mt-3 leading-relaxed">Un local propio te enseña rápido lo que ningún curso cuenta: hay noches en que faltan mesas y martes en que sobran todas.</p>
+
+      <h2 class="mt-7 font-display text-ink-soft text-2xl font-semibold leading-tight text-left break-after-avoid">El botón de “Promocionar”</h2>
+      <p class="mt-3 leading-relaxed">Como tantos dueños, un día quisimos más clientes y apretamos “Promocionar”. Pusimos dinero y nos quedamos con una pregunta que nadie nos respondía:</p>
+      <p class="my-5 py-4 border-y border-ink-soft/40 font-display italic text-2xl text-clay text-center leading-snug break-inside-avoid">¿Esto trajo a alguien a la mesa?</p>
+
+      <h2 class="mt-7 font-display text-ink-soft text-2xl font-semibold leading-tight text-left break-after-avoid">Nadie empieza una obra por el techo</h2>
+      <p class="mt-3 leading-relaxed">Ahí volvió la arquitectura. Antes de construir se estudia el terreno, y nosotros estábamos haciendo lo contrario: invertíamos en el anuncio sin haber mirado el negocio.</p>
+      <p class="mt-3 leading-relaxed">Así que empezamos por la base. Marla, por la carta, los costos y Google. Fred, por los datos y Meta. Dejamos de pensar en bajar precios y buscamos razones para ir, como un combo para San Valentín. Y aprendimos a medir lo único que importa: mesas, pedidos y mensajes.</p>
+
+      <h2 class="mt-7 font-display text-ink-soft text-2xl font-semibold leading-tight text-left break-after-avoid">La mesa y el lab</h2>
+      <p class="mt-3 leading-relaxed">De ese aprendizaje nació lamesalab. <strong>La mesa</strong>, porque todo lo que hacemos termina ahí: en un cliente sentado, un pedido que sale, alguien que vuelve. <strong>El lab</strong>, porque nada se da por hecho: se prueba, se mide y se decide con datos.</p>
+      <p class="mt-3 leading-relaxed">Hoy nos sentamos con dueños de negocios de comida en Puerto Rico y Buenos Aires para hacer lo que nos hubiera gustado que hicieran con nosotros: mirar primero tu negocio y decirte con honestidad qué toca ahora, aunque la respuesta sea no pautar todavía.</p>
+      <p class="mt-3 leading-relaxed">Seguimos siendo arquitectos. Solo cambiamos de obra: ahora construimos contigo el camino para que más clientes lleguen a tu mesa, y vuelvan.</p>
+
+    </div>
+  </article>
+</section>
+
+
+<!-- ==================== EL EQUIPO ==================== -->
+<section id="equipo" class="bg-sand/40">
+  <div class="max-w-6xl mx-auto px-5 py-20">
+    <div class="max-w-2xl mb-12">
+      <span class="text-sm font-semibold text-sage uppercase">El equipo</span>
+      <h2 class="font-display text-ink text-3xl md:text-4xl mt-2 leading-[1.05] tracking-tight text-balance">La cocina y los números, en la misma mesa</h2>
+      <p class="mt-4 text-lg leading-relaxed">Cada formulario lo leemos nosotros, y Marla o Fred te responden personalmente.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Marla -->
+      <article class="bg-white rounded-3xl border border-sand p-7 shadow-md grid grid-cols-[6.5rem_1fr] sm:grid-cols-[9rem_1fr] gap-5 sm:gap-6 items-start">
+        <img src="/imgs/marla.webp" alt="Foto de Marla" loading="lazy" class="w-full aspect-[3/4] rounded-2xl object-cover object-top">
+        <div>
+          <h3 class="font-display text-2xl font-semibold">Marla</h3>
+          <p class="mt-1 text-sm font-semibold text-clay">Especialista en Google Ads</p>
+          <p class="mt-3 leading-relaxed">Arquitecta, chef pastelera y asesora gastronómica. Cuando el problema no está en los anuncios sino en la carta, los costos o la operación, lo trabaja con la consultoría gastronómica.</p>
+        </div>
+      </article>
+
+      <!-- Fred -->
+      <article class="bg-white rounded-3xl border border-sand p-7 shadow-md grid grid-cols-[6.5rem_1fr] sm:grid-cols-[9rem_1fr] gap-5 sm:gap-6 items-start">
+        <img src="/imgs/fred.webp" alt="Foto de Frederick" loading="lazy" class="w-full aspect-[3/4] rounded-2xl object-cover object-top">
+        <div>
+          <h3 class="font-display text-2xl font-semibold">Frederick <span class="text-ink-soft/70 text-lg font-normal">(Fred)</span></h3>
+          <p class="mt-1 text-sm font-semibold text-clay">Especialista en Meta Ads</p>
+          <p class="mt-3 leading-relaxed">Arquitecto, programador y profesional de la publicidad digital. Se ocupa de que cada campaña tenga un objetivo claro y una forma de medir si trajo mensajes, pedidos o mesas.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== EN QUÉ CREEMOS ==================== -->
+<section id="valores" class="bg-sage text-cream">
+  <div class="max-w-6xl mx-auto px-5 py-20 grid lg:grid-cols-[1fr_2fr] gap-12 items-center">
+    <figure class="max-w-xs mx-auto lg:mx-0">
+      <img src="/imgs/combo-san-valentin.jpeg" alt="Publicación del combo especial de San Valentín de La Rinconada, con una pizza en forma de corazón" width="530" height="960" loading="lazy" class="w-full h-auto rounded-3xl shadow-md">
+      <figcaption class="mt-3 text-sm text-cream/70">Combo de San Valentín en La Rinconada: una razón para ir que no depende de bajar precios.</figcaption>
+    </figure>
+
+    <div>
+      <span class="text-sm font-semibold text-clay-light uppercase">En qué creemos</span>
+      <h2 class="font-display text-cream text-3xl md:text-4xl mt-2 leading-[1.05] tracking-tight text-balance">Lo que aprendimos detrás del mostrador</h2>
+
+      <div class="mt-10 grid sm:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-display text-xl font-semibold">Honestidad antes que venta</h3>
+          <p class="mt-2 text-cream/80 leading-relaxed">Si tu negocio todavía no está listo para pautar, te lo decimos. A veces el primer paso no es un anuncio.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-semibold">La publicidad no inventa razones</h3>
+          <p class="mt-2 text-cream/80 leading-relaxed">Amplifica el negocio que ya existe. Por eso miramos primero el mensaje, los momentos de consumo y tu ecosistema digital.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-semibold">Vender sin bajar precios</h3>
+          <p class="mt-2 text-cream/80 leading-relaxed">Bajar precios enseña al cliente a venir solo cuando hay oferta. Preferimos un plato del día, un combo exclusivo o una actividad con otro negocio.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-semibold">Medir lo que importa</h3>
+          <p class="mt-2 text-cream/80 leading-relaxed">Mesas, pedidos, mensajes y costo por resultado. No prometemos cifras antes de conocer tu negocio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== LLAMADA A LA ACCIÓN ==================== -->
+<section id="contacto" class="bg-sand/40">
+  <div class="max-w-3xl mx-auto px-5 py-20 text-center">
+    <h2 class="font-display text-ink text-3xl md:text-4xl leading-[1.05] tracking-tight text-balance">Cuéntanos de tu negocio</h2>
+    <p class="mt-4 text-lg leading-relaxed">Completa el diagnóstico gratis y te decimos en qué etapa estás y cuál es tu problema principal. No tiene costo ni compromiso.</p>
+    <a href="/diagnostico/#diagnostico" class="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-7 py-3.5 transition-colors">
+      Empieza con el diagnóstico gratis
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+    </a>
+  </div>
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-sand/40 border-t border-sand">
+  <div class="max-w-6xl mx-auto px-5 py-6 flex flex-col items-center justify-center">
+    <div>
+      <img src="/imgs/lamesalab-logo.png" class="h-80 w-auto" alt="logo lamesalab">
+    </div>
+  </div>
+  <div class="text-center text-xs text-ink-soft/60 pb-8">© <span id="year"></span> lamesalab. Todos los derechos reservados.</div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="/js/menu.js"></script>
+
+<script src="/js/cookies.js"></script>
+
+</body>
+</html>

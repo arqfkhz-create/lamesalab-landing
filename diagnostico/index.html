@@ -273,33 +273,6 @@
   </div>
 </section>
 
-<!-- ==================== CÓMO TRABAJAMOS ==================== 
-<section id="como" class="bg-ink text-cream">
-  <div class="max-w-6xl mx-auto px-5 py-20">
-    <div class="max-w-2xl mb-12">
-      <span class="text-sm font-semibold text-clay-light mb-3 uppercase">Cómo trabajamos</span>
-      <h2 class="font-display text-3xl md:text-4xl font-600 tracking-tight mt-2 text-cream">Primero entendemos donde esta parado el restaurante, después armamos estrategia.</h2>
-    </div>
-    <div class="grid sm:grid-cols-3 gap-8">
-      <div>
-        <div class="font-display text-5xl font-600 text-clay-light">01</div>
-        <h3 class="font-600 text-lg mt-3">Diagnosticamos</h3>
-        <p class="mt-2 text-cream/70 leading-relaxed">Completás el formulario y entendemos en qué categoría estás y cuál es tu problema principal.</p>
-      </div>
-      <div>
-        <div class="font-display text-5xl font-600 text-clay-light">02</div>
-        <h3 class="font-600 text-lg mt-3">Te ubicamos</h3>
-        <p class="mt-2 text-cream/70 leading-relaxed">Te decimos con honestidad si conviene ordenar bases con herramientas gratuitas o si ya estás para escalar.</p>
-      </div>
-      <div>
-        <div class="font-display text-5xl font-600 text-clay-light">03</div>
-        <h3 class="font-600 text-lg mt-3">Avanzamos juntos</h3>
-        <p class="mt-2 text-cream/70 leading-relaxed">Definimos el plan a tu medida, con pasos concretos y métricas para saber si funciona.</p>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <!-- ==================== DIAGNÓSTICO / FORMULARIO ==================== -->
 <section class="bg-sand/40">
 <div id="diagnostico" class="max-w-6xl mx-auto px-5 py-20">
@@ -394,7 +367,9 @@ document.querySelectorAll('.acc-trigger').forEach(btn => {
 </script>
 
 <!-- SCRIPT META PIXEL -->
-<script>!function(f,b,e,v,n,t,s)  
+<script>
+window.cargarPixelMeta = function () {
+  !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -404,10 +379,8 @@ document.querySelectorAll('.acc-trigger').forEach(btn => {
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1565688395308458');
   fbq('track', 'PageView');
+};
 </script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1565688395308458&ev=PageView&noscript=1"
-/></noscript>
 <!-- End Meta Pixel Code -->
 
 <!-- Script Video Hero -->
@@ -430,6 +403,8 @@ document.querySelectorAll('.acc-trigger').forEach(btn => {
   });
 })();
 </script>
+
+<script src="/js/cookies.js"></script>
 
 </body>
 </html>

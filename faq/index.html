@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamesalab - Preguntas & Respuestas</title>
+    <meta name="facebook-domain-verification" content="fmfldtvb08dcl7pjgyxczxnsyrc61b" />
+
+  
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2', 
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
+                sans: ['"Roboto Slab"', 'Georgia', 'sans-serif'],
+                display: ['"Fraunces"', 'Georgia', 'serif'],
+            },
+        },
+      },
+    };
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  
+<header class="sticky top-0 z-40 bg-sand/40 backdrop-blur border-b border-sand">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="/"><img src="/imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto"></a>
+
+    <!-- Menú de escritorio (desde 1024 px) -->
+    <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+      <a href="/servicios/" class="hover:text-clay transition-colors">Servicios</a>
+      <a href="/recursos/" class="hover:text-clay transition-colors">Recursos</a>
+      <a href="/quienes-somos/" class="hover:text-clay transition-colors">Quienes Somos</a>
+      <a href="/faq/" class="hover:text-clay transition-colors">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-2.5 transition-colors">Diagnóstico gratis</a>
+    </div>
+
+    <!-- Botón hamburguesa (celular y iPad) -->
+    <button id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"
+            class="lg:hidden p-2 -mr-2 text-ink-soft">
+      <svg id="icono-abrir" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="icono-cerrar" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú desplegable (celular y iPad) -->
+  <div id="menu-movil" class="hidden lg:hidden border-t border-sand bg-cream">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col text-ink-soft font-medium">
+      <a href="/servicios/" class="py-3 border-b border-sand">Servicios</a>
+      <a href="/recursos/" class="py-3 border-b border-sand">Recursos</a>
+      <a href="/quienes-somos/" class="py-3 border-b border-sand">Quienes Somos</a>
+      <a href="/faq/" class="py-3 border-b border-sand">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="mt-4 rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-3 text-center transition-colors">Diagnóstico gratis</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= SECCIÓN PREGUNTAS FRECUENTES (ACCORDION) ================= -->
+
+<section id="preguntas" class="scroll-mt-24 bg-sand/40 py-24">
+  <div class="max-w-3xl mx-auto px-5">
+    <div class="text-sm font-semibold text-sage mb-3 uppercase">Preguntas frecuentes</div>
+    <h2 class="font-display text-3xl lg:text-4xl font-semibold leading-[1.1] tracking-tight text-balance mb-4">
+      Lo que suelen preguntarnos antes de empezar
+    </h2>
+    <p class="text-ink mb-12 max-w-xl">
+      Si tu duda no está aquí, escríbenos y te respondemos con honestidad.
+    </p>
+
+    <div class="space-y-3" id="faq-accordion">
+
+      <!-- ITEM 1 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-1" aria-expanded="false" aria-controls="faq-1">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            ¿Qué incluye el diagnóstico gratis?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-1" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Respondes unas preguntas sobre tu negocio y revisamos tus tres bases: el mensaje, los momentos de consumo y tu ecosistema digital (ficha de Google, WhatsApp, link de pedidos y píxel). Con eso te decimos en qué etapa estás y cuál es tu problema principal. No tiene costo ni compromiso.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-2" aria-expanded="false" aria-controls="faq-2">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            ¿Para qué tipo de negocio trabajan?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-2" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Para negocios de comida en Puerto Rico: restaurantes, cafeterías, panaderías, pastelerías, food trucks y dark kitchens. Si estás por abrir o recién empiezas, también podemos orientarte sobre qué dejar listo antes de invertir en anuncios.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-3" aria-expanded="false" aria-controls="faq-3">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            ¿Me sirve el botón “Promocionar” de Instagram o Facebook?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-3" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Puede servirte para algo puntual, pero no es una estrategia. Promocionar impulsa esa publicación; una campaña tiene un objetivo, varios anuncios y una forma de medir si trajo mensajes, pedidos o mesas. Nosotros mismos pusimos dinero en “Promocionar” sin saber si había traído clientes, y de ahí salió la forma en que trabajamos hoy.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-4" aria-expanded="false" aria-controls="faq-4">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            Ya probé con anuncios y no funcionó. ¿Por qué ahora sí?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-4" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            No podemos prometerte que sí. Lo que hacemos es buscar por qué no funcionó. Muchas veces el problema no está en el anuncio sino en la razón para ir, en el momento en que se publicó o en el camino de compra, por ejemplo un WhatsApp que nadie contesta a la hora del almuerzo. Si es así, lo arreglamos antes de volver a invertir.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 5 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-5" aria-expanded="false" aria-controls="faq-5">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            ¿Y si mi negocio todavía no está listo para hacer publicidad?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-5" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Te lo decimos. La publicidad amplifica el negocio que ya existe, así que si las bases no están, lo más probable es que el presupuesto se pierda. En ese caso te indicamos qué ordenar primero, con herramientas gratuitas cuando alcanzan. Si el problema está en la carta, los costos o la operación, Marla lo trabaja con la consultoría gastronómica.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 6 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-6" aria-expanded="false" aria-controls="faq-6">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            ¿Cuánto tiempo toma ver resultados?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-6" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Trabajamos en ciclos de tres meses porque una campaña necesita tiempo para aprender. El primer mes probamos creativos e instalamos la medición, el segundo concentramos lo que ganó y el tercero decidimos qué se sostiene. Juzgar un anuncio a los pocos días suele llevar a cambiarlo antes de que aprenda. No damos cifras ni plazos garantizados.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 7 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-7" aria-expanded="false" aria-controls="faq-7">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            Tengo un anuncio que funciona. ¿Le subo el presupuesto?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-7" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Antes de tocarlo conviene entender por qué funciona. Subir el presupuesto de golpe puede romper lo que andaba bien. Además, una estrategia necesita más de una campaña: una para captar clientes nuevos y otra para que vuelvan. Si quieres, lo revisamos juntos en el diagnóstico.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 8 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-8" aria-expanded="false" aria-controls="faq-8">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            No tengo tiempo para encargarme de esto. ¿Qué necesitan de mí?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-8" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Lo principal es que alguien conteste los mensajes a tiempo y que podamos conocer tu negocio: qué vendes, qué días se llena y cuáles quedan flojos. Nosotros nos encargamos de las campañas y de la medición, y tú sigues en la cocina y en el salón.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 9 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-9" aria-expanded="false" aria-controls="faq-9">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            ¿Hacen descuentos para llenar los días flojos?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-9" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            No como estrategia. Bajar precios enseña al cliente a venir solo cuando hay oferta. Preferimos buscar una razón para ir que no toque el precio, como un plato del día, un combo exclusivo o una actividad con otro negocio.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 10 -->
+      <div class="border border-[#4C3636]/15 rounded-md overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 bg-white hover:bg-[#4C3636]/[0.03] transition-colors" data-target="faq-10" aria-expanded="false" aria-controls="faq-10">
+          <span class="font-display text-lg font-semibold text-ink-soft pr-4">
+            ¿Cómo sé que mi dinero en anuncios está trabajando?
+          </span>
+          <svg class="acc-icon w-5 h-5 flex-shrink-0 text-[#C9A24D] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="faq-10" class="acc-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+          <p class="px-6 py-6 text-[#574545] text-[0.98rem] leading-relaxed">
+            Medimos lo que importa en un negocio de comida: mesas, pedidos, mensajes y costo por resultado. Antes de empezar instalamos el píxel y las bases para medir, así cada decisión se apoya en un dato y no en una impresión.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <p class="text-ink mb-4">¿Quieres saber en qué etapa está tu negocio?</p>
+      <a href="/diagnostico/#diagnostico" class="inline-flex items-center justify-center rounded-md bg-clay hover:bg-clay-dark text-white text-sm font-semibold px-6 py-3 transition-colors">
+        Empieza con el diagnóstico gratis
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- JS del accordion (pégalo antes de </body>; solo afecta a #faq-accordion, no toca el de dolores) -->
+<script>
+  (function () {
+    var acc = document.getElementById('faq-accordion');
+    if (!acc) return;
+    var triggers = acc.querySelectorAll('.acc-trigger');
+
+    function cerrar(btn) {
+      var panel = document.getElementById(btn.dataset.target);
+      panel.style.maxHeight = '0px';
+      btn.querySelector('.acc-icon').style.transform = 'rotate(0deg)';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    function abrir(btn) {
+      var panel = document.getElementById(btn.dataset.target);
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      btn.querySelector('.acc-icon').style.transform = 'rotate(180deg)';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+
+    triggers.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var estabaAbierto = btn.getAttribute('aria-expanded') === 'true';
+        triggers.forEach(cerrar);          // deja solo uno abierto
+        if (!estabaAbierto) abrir(btn);
+      });
+    });
+
+    // Si cambia el ancho de la pantalla, recalcula la altura del panel abierto
+    window.addEventListener('resize', function () {
+      triggers.forEach(function (btn) {
+        if (btn.getAttribute('aria-expanded') === 'true') abrir(btn);
+      });
+    });
+  })();
+</script>
+
+<!-- SEO: datos estructurados (opcional, pegar antes de </body>) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye el diagnóstico gratis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Respondes unas preguntas sobre tu negocio y revisamos tus tres bases: el mensaje, los momentos de consumo y tu ecosistema digital (ficha de Google, WhatsApp, link de pedidos y píxel). Con eso te decimos en qué etapa estás y cuál es tu problema principal. No tiene costo ni compromiso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué tipo de negocio trabajan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para negocios de comida en Puerto Rico: restaurantes, cafeterías, panaderías, pastelerías, food trucks y dark kitchens. Si estás por abrir o recién empiezas, también podemos orientarte sobre qué dejar listo antes de invertir en anuncios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Me sirve el botón “Promocionar” de Instagram o Facebook?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede servirte para algo puntual, pero no es una estrategia. Promocionar impulsa esa publicación; una campaña tiene un objetivo, varios anuncios y una forma de medir si trajo mensajes, pedidos o mesas. Nosotros mismos pusimos dinero en “Promocionar” sin saber si había traído clientes, y de ahí salió la forma en que trabajamos hoy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ya probé con anuncios y no funcionó. ¿Por qué ahora sí?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No podemos prometerte que sí. Lo que hacemos es buscar por qué no funcionó. Muchas veces el problema no está en el anuncio sino en la razón para ir, en el momento en que se publicó o en el camino de compra, por ejemplo un WhatsApp que nadie contesta a la hora del almuerzo. Si es así, lo arreglamos antes de volver a invertir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si mi negocio todavía no está listo para hacer publicidad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Te lo decimos. La publicidad amplifica el negocio que ya existe, así que si las bases no están, lo más probable es que el presupuesto se pierda. En ese caso te indicamos qué ordenar primero, con herramientas gratuitas cuando alcanzan. Si el problema está en la carta, los costos o la operación, Marla lo trabaja con la consultoría gastronómica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma ver resultados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trabajamos en ciclos de tres meses porque una campaña necesita tiempo para aprender. El primer mes probamos creativos e instalamos la medición, el segundo concentramos lo que ganó y el tercero decidimos qué se sostiene. Juzgar un anuncio a los pocos días suele llevar a cambiarlo antes de que aprenda. No damos cifras ni plazos garantizados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tengo un anuncio que funciona. ¿Le subo el presupuesto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Antes de tocarlo conviene entender por qué funciona. Subir el presupuesto de golpe puede romper lo que andaba bien. Además, una estrategia necesita más de una campaña: una para captar clientes nuevos y otra para que vuelvan. Si quieres, lo revisamos juntos en el diagnóstico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "No tengo tiempo para encargarme de esto. ¿Qué necesitan de mí?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo principal es que alguien conteste los mensajes a tiempo y que podamos conocer tu negocio: qué vendes, qué días se llena y cuáles quedan flojos. Nosotros nos encargamos de las campañas y de la medición, y tú sigues en la cocina y en el salón."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacen descuentos para llenar los días flojos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No como estrategia. Bajar precios enseña al cliente a venir solo cuando hay oferta. Preferimos buscar una razón para ir que no toque el precio, como un plato del día, un combo exclusivo o una actividad con otro negocio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé que mi dinero en anuncios está trabajando?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medimos lo que importa en un negocio de comida: mesas, pedidos, mensajes y costo por resultado. Antes de empezar instalamos el píxel y las bases para medir, así cada decisión se apoya en un dato y no en una impresión."
+      }
+    }
+  ]
+}
+</script>
+
+<script src="/js/cookies.js"></script>
+
+</body>
