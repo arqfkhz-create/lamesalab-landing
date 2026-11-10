@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamesalab - Nuestros Servicios</title>
+    <meta name="facebook-domain-verification" content="fmfldtvb08dcl7pjgyxczxnsyrc61b" />
+
+  
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2', 
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
+                sans: ['"Roboto Slab"', 'Georgia', 'sans-serif'],
+                display: ['"Fraunces"', 'Georgia', 'serif'],
+            },
+        },
+      },
+    };
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  
+<header class="sticky top-0 z-40 bg-sand/40 backdrop-blur border-b border-sand">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="/"><img src="/imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto"></a>
+
+    <!-- Menú de escritorio (desde 1024 px) -->
+    <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+      <a href="/servicios" class="hover:text-clay transition-colors">Servicios</a>
+      <div class="relative group">
+      <a href="/recursos/" aria-current="page" class="inline-flex items-center gap-1 text-clay hover:text-sage transition-colors">
+        Recursos
+        <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+        </svg>
+      </a>
+
+      <div class="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block">
+        <div class="w-56 bg-white border border-sand rounded-md shadow-md py-2">
+          <a href="/recursos/evaluacion/" class="block px-4 py-2 hover:bg-sand hover:text-clay transition-colors">Evaluación gratuita</a>
+          <a href="/recursos/blog/" class="block px-4 py-2 hover:bg-sand hover:text-clay transition-colors">Blog</a>
+        </div>
+      </div>
+    </div>
+      <a href="/quienes-somos" class="hover:text-clay transition-colors">Quienes Somos</a>
+      <a href="/faq" class="hover:text-clay transition-colors">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-2.5 transition-colors">Diagnóstico gratis</a>
+    </div>
+
+    <!-- Botón hamburguesa (celular y iPad) -->
+    <button id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"
+            class="lg:hidden p-2 -mr-2 text-ink-soft">
+      <svg id="icono-abrir" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="icono-cerrar" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú desplegable (celular y iPad) -->
+  <div id="menu-movil" class="hidden lg:hidden border-t border-sand bg-cream">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col text-ink-soft font-medium">
+      <a href="/servicios/" class="py-3 border-b border-sand">Servicios</a>
+      <a href="/recursos/" class="pt-3 pb-1">Recursos</a>
+        <div class="flex flex-col pl-4 pb-2 text-sm border-b border-sand">
+          <a href="/recursos/evaluacion/" class="py-2">Evaluación gratuita</a>
+          <a href="/recursos/blog/" class="py-2">Blog</a>
+        </div>
+      <a href="/quienes-somos/" class="py-3 border-b border-sand">Quienes Somos</a>
+      <a href="/faq/" class="py-3 border-b border-sand">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="mt-4 rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-3 text-center transition-colors">Diagnóstico gratis</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ==================== NUESTROS SERVICIOS ==================== -->
+<section id="servicios" class="bg-sand/40">
+  <div class="max-w-6xl mx-auto px-5 py-12">
+
+    <div class="max-w-5xl mb-14">
+      <span class="text-sm font-semibold text-sage uppercase">Recursos disponibles</span>
+      <h2 class="font-display text-ink text-4xl sm:text-3xl lg:text-4xl font-600 leading-[1.05] tracking-tight text-balance">
+        Herramientas gratuitas para tu negocio de comida</h2>
+      <p class="mt-4 text-ink text-lg">Recursos prácticos para evaluar tu presencia digital, conocer tus costos y tomar mejores decisiones.</p>
+    </div>
+
+    <!-- Proyectos con entrega (1–3) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+
+      <!-- 01 EVALUACION DE MI NEGOCIO  -->
+
+<article class="relative flex flex-col bg-white rounded-3xl border-2 border-clay p-7 shadow-md md:col-span-2 lg:col-span-1">
+        <span class="absolute -top-3 left-7 text-[11px] font-semibold uppercase tracking-wider text-white bg-clay rounded-full px-3 py-1">Recomendada</span>
+
+        <div class="flex items-center justify-end">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Recurso gratuito</span>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mt-4">Evaluación de mi negocio</h3>
+        <p class="mt-2 text-ink-soft leading-relaxed">¿En qué etapa está tu negocio?</p>
+        <p class="mt-3">Responde 12 preguntas sobre tu marca, tus momentos de consumo y tu ecosistema digital. Al terminar verás tu nivel y podrás recibir tu resultado junto con una guía gratuita.</p>
+
+        <div class="mt-auto pt-6">
+          <p class="mb-3 text-xs text-center text-ink-soft/80">Su información esta protegida no compartimos a nadie</p>
+          <a href="/recursos/evaluacion/" class="flex w-full justify-center gap-2 rounded-lg bg-sage hover:bg-dark text-white text-sm font-semibold px-6 py-3 transition-colors">Comenzar Evaluación
+          <svg class="h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        </div>
+      </article>
+
+      <!-- 02 · CALCULADORA DE RECETAS-->
+      <article class="flex flex-col bg-white rounded-3xl border border-sand p-7 shadow-md">
+        <div class="flex items-center justify-end">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Recurso gratuito</span>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mt-4">Calculadora de costos para mi receta</h3>
+        <p class="mt-3">Ingresa los ingredientes, las cantidades y lo que pagas por cada uno. La calculadora te muestra cuánto cuesta preparar tu receta y cada porción, para que definas tus precios con números reales.</p>
+
+        <div class="mt-auto pt-6">
+          <p class="mb-3 text-xs text-center text-ink-soft/80">Su información esta protegida no compartimos a nadie</p>
+          <a href="/recursos/calculadora" class="flex w-full justify-center gap-2 rounded-lg bg-sage hover:bg-dark text-white text-sm font-semibold px-6 py-3 transition-colors">Calcular costo de mi receta<svg class="h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        </div>
+      </article>
+
+
+      <!-- 03 · BLOG -->
+      <article class="flex flex-col bg-white rounded-3xl border border-sand p-7 shadow-md">
+        <div class="flex items-center justify-end">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Recurso gratuito</span>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mt-4">BLOG</h3>
+        <p class="text-ink font-normal text-lg">publicación semanal</p>
+        <p class="mt-2 text-ink leading-relaxed">Guías prácticas sobre presencia digital, publicidad y gestión de restaurantes, escritas a partir de nuestra experiencia como dueños.</p>
+
+        <div class="mt-auto pt-6">
+          <a href="/recursos/blog/" class="flex w-full justify-center gap-2 rounded-lg bg-sage hover:bg-dark text-white text-sm font-semibold px-6 py-3 transition-colors">Leer los artículos<svg class="h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-sand/40 border-t border-sand">
+  <div class="max-w-6xl mx-auto px-5 pt-8 flex flex-col items-center justify-center">
+    <div class="flex items-center justify-center gap-3 pb-8">
+   
+    <a class="text-sage hover:text-orange-600" aria-label="Visit TrendyMinds Facebook" href="https://www.facebook.com/p/Lamesalab-61594347794361/" target="_blank"><svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-8">
+            <path fill="currentColor"
+                d="m279.14 288 14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+            </path>
+        </svg>
+    </a>
+    <a class="text-sage hover:text-orange-600" aria-label="Visit TrendyMinds Instagram" href="https://www.instagram.com/lamesalab/" target="_blank"><svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-8">
+            <path fill="currentColor"
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+            </path>
+        </svg>
+    </a>
+    <a class="text-sage hover:text-clay" aria-label="WhatsApp de lamesalab" href="https://wa.me/19394986369" target="_blank" rel="noopener"><svg
+            class="h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+            </path>
+        </svg>
+    </a>
+</div>
+
+    <div>
+      <img src="/imgs/lamesalab-logo.png" class="h-28 w-auto mb-6" alt="Logo de lamesalab">   
+    </div>
+  
+  <div class="text-center text-xs text-ink-soft/60 pb-8">© <span id="year"></span> lamesalab. Todos los derechos reservados.</div>
+
+
+  </div>
+</footer>
+
+</body>

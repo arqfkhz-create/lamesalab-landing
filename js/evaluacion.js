@@ -183,7 +183,7 @@
  
     pantalla.innerHTML = `
       <div class="paso text-center">
-        <span class="text-sm font-semibold text-sage uppercase">Evaluación gratis · 5 minutos</span>
+        <span class="text-sm font-semibold text-clay uppercase">Evaluación gratis · 5 minutos</span>
         <h1 class="font-display text-3xl sm:text-4xl font-semibold text-ink-soft tracking-tight leading-tight mt-3 text-balance">
           ¿Qué tan visible es tu negocio de comida?
         </h1>
@@ -191,16 +191,16 @@
           Responde 12 preguntas y descubre qué está funcionando, qué te está haciendo perder clientes y por dónde empezar.
         </p>
  
-        <div class="mt-8 grid sm:grid-cols-3 gap-3 text-left">
+        <div class="mt-8 grid sm:grid-cols-3 gap-5 text-left">
           ${Object.values(PILARES).map((p) => `
-            <div class="rounded-xl bg-sand/60 p-4">
+            <div class="border-t-2 border-ink-soft pt-3">
               <p class="text-xs font-semibold uppercase tracking-wider text-clay">Pilar ${p.numero}</p>
               <p class="font-semibold text-ink-soft mt-1">${p.nombre}</p>
             </div>`).join("")}
         </div>
  
         <button type="button" id="btn-empezar"
-          class="mt-8 inline-flex items-center gap-2 rounded-full bg-ink-soft hover:bg-ink text-cream font-semibold px-8 py-3.5 transition-colors">
+          class="mt-8 inline-flex items-center gap-2 rounded-md bg-clay hover:bg-ink-soft text-white font-semibold px-8 py-3.5 transition-colors">
           Empezar la evaluación
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </button>
@@ -231,16 +231,16 @@
         <p class="text-xs font-semibold uppercase tracking-wider text-clay">Pregunta ${i + 1}</p>
         <h2 class="font-display text-2xl font-semibold text-ink-soft tracking-tight mt-2">${p.texto}</h2>
  
-        <div class="mt-6 space-y-3">
+        <div class="mt-6 border-t border-ink-soft/30">
           ${p.opciones.map((texto, idx) => {
             const sel = elegida === idx;
             return `
               <button type="button" data-idx="${idx}"
-                class="opcion w-full text-left rounded-xl border-2 px-4 py-4 transition-all flex items-start gap-3
-                ${sel ? "border-clay bg-clay/5" : "border-sand hover:border-clay/50 hover:bg-sand/40"}">
-                <span class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold
-                  ${sel ? "bg-clay text-white" : "bg-sand text-ink-soft"}">${LETRAS[idx]}</span>
-                <span class="font-medium text-ink-soft pt-1">${texto}</span>
+                class="opcion w-full text-left border-b border-ink-soft/30 px-2 py-4 transition-colors flex items-baseline gap-4
+                ${sel ? "bg-sand" : "hover:bg-sand/50"}">
+                <span class="shrink-0 w-5 font-display text-lg font-semibold
+                  ${sel ? "text-clay" : "text-ink-soft"}">${LETRAS[idx]}</span>
+                <span class="text-ink-soft ${sel ? "font-semibold" : ""}">${texto}</span>
               </button>`;
           }).join("")}
         </div>
@@ -251,7 +251,7 @@
             Atrás
           </button>
           ${elegida !== null ? `
-            <button type="button" id="btn-siguiente" class="rounded-full bg-ink-soft hover:bg-ink text-cream font-semibold px-7 py-3 transition-colors">
+            <button type="button" id="btn-siguiente" class="rounded-md bg-clay hover:bg-ink-soft text-white font-semibold px-7 py-3 transition-colors">
               ${i === PREGUNTAS.length - 1 ? "Ver mi resultado" : "Siguiente"}
             </button>` : ""}
         </div>
@@ -308,9 +308,9 @@
   }
  
   function estadoPilar(puntos) {
-    if (puntos <= 3) return { nombre: "Prioridad", color: "#F4320B", fondo: "bg-clay/10", texto: "text-clay-dark" };
-    if (puntos <= 5) return { nombre: "Hay que ajustar", color: "#C9A24D", fondo: "bg-gold/15", texto: "text-[#8a6a22]" };
-    return { nombre: "Bien resuelto", color: "#3f6b5e", fondo: "bg-sage/10", texto: "text-sage-dark" };
+    if (puntos <= 3) return { nombre: "Prioridad", color: "#df2c1e", texto: "text-clay" };
+    if (puntos <= 5) return { nombre: "Hay que ajustar", color: "#bf9000", texto: "text-[#8a6a22]" };
+    return { nombre: "Bien resuelto", color: "#2f5248", texto: "text-sage-dark" };
   }
  
   function renderResultado() {
@@ -329,14 +329,14 @@
       const pts = porPilar[key];
       const est = estadoPilar(pts);
       return `
-        <div class="rounded-xl border border-sand p-4">
+        <div class="border-t-2 border-ink-soft pt-3">
           <p class="text-xs font-semibold uppercase tracking-wider text-ink">Pilar ${pil.numero}</p>
           <p class="font-semibold text-ink-soft mt-1">${pil.nombre}</p>
           <p class="font-display text-3xl font-semibold text-ink-soft mt-3">${pts}<span class="text-base text-ink"> / 8</span></p>
-          <div class="h-2 bg-sand rounded-full overflow-hidden mt-2">
-            <div class="h-full rounded-full" style="width:${(pts / 8) * 100}%; background:${est.color}"></div>
+          <div class="h-1 bg-sand overflow-hidden mt-2">
+            <div class="h-full" style="width:${(pts / 8) * 100}%; background:${est.color}"></div>
           </div>
-          <span class="inline-block mt-3 rounded-full ${est.fondo} ${est.texto} text-xs font-bold px-2.5 py-1">${est.nombre}</span>
+          <span class="inline-block mt-2 ${est.texto} text-xs font-bold uppercase tracking-wider">${est.nombre}</span>
         </div>`;
     }).join("");
  
@@ -353,7 +353,7 @@
           <ul class="mt-3 space-y-3">
             ${items.map((x) => `
               <li class="flex gap-3">
-                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full ${x.r === 0 ? "bg-clay" : "bg-gold"} text-white text-xs font-bold flex items-center justify-center">${x.i + 1}</span>
+                <span class="shrink-0 w-6 font-display font-semibold ${x.r === 0 ? "text-clay" : "text-[#8a6a22]"}">${x.i + 1}</span>
                 <span>${x.p.consejo}</span>
               </li>`).join("")}
           </ul>
@@ -361,8 +361,8 @@
     }).join("");
  
     const ctaDiagnostico = total >= 17
-      ? `<a href="diagnostico/" class="rounded-full bg-clay hover:bg-clay-dark text-white font-semibold px-7 py-3.5 text-center transition-colors">Quiero crecer con publicidad</a>`
-      : `<a href="diagnostico/" class="rounded-full border border-ink/20 hover:border-ink text-ink-soft font-semibold px-7 py-3.5 text-center transition-colors">Quiero ayuda con mi negocio</a>`;
+      ? `<a href="diagnostico/" class="rounded-md bg-clay hover:bg-ink-soft text-white font-semibold px-7 py-3.5 transition-colors text-center">Quiero crecer con publicidad</a>`
+      : `<a href="diagnostico/" class="rounded-md border border-ink-soft hover:bg-sand text-ink-soft font-semibold px-7 py-3.5 transition-colors text-center">Quiero ayuda con mi negocio</a>`;
  
     pantalla.innerHTML = `
       <div class="paso">
@@ -373,24 +373,24 @@
           <p class="mt-3 text-lg max-w-xl mx-auto">${nivel.texto}</p>
         </div>
  
-        <div class="mt-8 grid sm:grid-cols-3 gap-3">${tarjetas}</div>
+        <div class="mt-8 grid sm:grid-cols-3 gap-5">${tarjetas}</div>
  
-        <div class="mt-8 rounded-2xl bg-cream border border-sand p-5 sm:p-6">
+        <div class="mt-8 bg-cream p-5 sm:p-6">
           <h3 class="font-display text-xl font-semibold text-ink-soft">Por dónde empezar</h3>
           <p class="mt-2">${nivel.paso}</p>
           ${consejos || `<p class="mt-4 font-semibold text-sage-dark">¡Respondiste C en todo! Tu presencia digital está muy bien resuelta.</p>`}
         </div>
  
         <!-- Formulario para recibir el resultado -->
-        <div id="bloque-lead" class="mt-8 rounded-2xl border-2 border-clay/30 p-5 sm:p-6">
+        <div id="bloque-lead" class="mt-10 border-t-4 border-ink-soft pt-5">
           <h3 class="font-display text-xl font-semibold text-ink-soft">Recibe tu resultado y la guía gratis</h3>
           <p class="mt-2">Te mandamos tu evaluación y la Guía Express de presencia digital, con los pasos para mejorar cada punto.</p>
-          <form id="form-lead" class="mt-5 space-y-4" novalidate>
+          <form id="form-lead" class="mt-6 space-y-6" novalidate>
             ${campo("nombre", "Tu nombre", "text", "Nombre")}
             ${campo("negocio", "Nombre del negocio", "text", "Ej. La Cocina de Ana")}
             ${campo("contacto", "WhatsApp o email", "text", "Ej. 787-555-1234")}
-            <p id="lead-error" class="hidden text-sm text-clay-dark font-semibold"></p>
-            <button type="submit" id="btn-lead" class="w-full sm:w-auto rounded-full bg-clay hover:bg-clay-dark text-white font-semibold px-7 py-3.5 transition-colors">
+            <p id="lead-error" class="hidden text-sm text-clay font-semibold"></p>
+            <button type="submit" id="btn-lead" class="w-full sm:w-auto rounded-md bg-clay hover:bg-ink-soft text-white font-semibold px-7 py-3.5 transition-colors">
               Enviarme mi resultado
             </button>
           </form>
@@ -398,7 +398,7 @@
  
         <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           ${ctaDiagnostico}
-          <button type="button" id="btn-reiniciar" class="rounded-full border border-ink/20 hover:border-ink text-ink-soft font-semibold px-7 py-3.5 transition-colors">Volver a empezar</button>
+          <button type="button" id="btn-reiniciar" class="rounded-md border border-ink-soft hover:bg-sand text-ink-soft font-semibold px-7 py-3.5 transition-colors">Volver a empezar</button>
         </div>
       </div>`;
  
@@ -412,9 +412,9 @@
   function campo(name, label, type, placeholder) {
     return `
       <div>
-        <label class="block text-sm font-semibold text-ink-soft mb-1.5" for="lead-${name}">${label} <span class="text-clay">*</span></label>
+        <label class="block text-sm font-semibold text-ink-soft" for="lead-${name}">${label} <span class="text-clay">*</span></label>
         <input id="lead-${name}" name="${name}" type="${type}" placeholder="${placeholder}" required
-          class="w-full rounded-xl border-2 border-sand focus:border-clay focus:ring-0 px-4 py-3 outline-none transition-colors bg-white text-ink-soft" />
+          class="w-full border-0 border-b-2 border-ink-soft/40 focus:border-clay px-0 py-2 outline-none transition-colors bg-transparent text-ink-soft" />
       </div>`;
   }
  

@@ -8,7 +8,7 @@
   //   "no" → diagnóstico completo (PASOS_DIAGNOSTICO).
   const PASO_INICIAL = {
     key: "cliente",
-    question: "¿Ya estás listo para comenzar a publicar?",
+    question: "¿Ya estás listo para invertir en publicidad?",
     help: "Si respondes que sí, cuéntanos un poco de tu negocio y te contactamos en menos de 24 horas.",
     type: "single",
     options: [

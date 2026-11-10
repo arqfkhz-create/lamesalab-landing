@@ -16,12 +16,10 @@
   aviso.id = "aviso-cookies";
   aviso.setAttribute("role", "region");
   aviso.setAttribute("aria-label", "Aviso de cookies");
-  aviso.className = "fixed bottom-0 inset-x-0 z-50 bg-white border-t border-sand shadow-lg";
+  aviso.className = "fixed bottom-3 inset-x-3 sm:inset-x-auto sm:left-5 sm:bottom-5 sm:w-80 z-50 bg-cream border border-ink-soft border-t-4 px-4 py-3";
   aviso.innerHTML = `
-    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-      <p class="text-sm text-ink-soft leading-relaxed">Este sitio usa cookies de Meta para medir si nuestras campañas funcionan.</p>
-      <button type="button" class="shrink-0 rounded-md bg-ink-soft text-white text-sm font-semibold px-6 py-2.5">Entendido</button>
-    </div>`;
+    <p class="font-display text-[15px] text-ink-soft leading-snug">Este sitio usa cookies de Meta para medir si nuestras campañas funcionan.</p>
+    <button type="button" class="mt-2 py-1 text-sm font-semibold text-ink-soft underline underline-offset-4 decoration-clay decoration-2 hover:text-clay">Entendido</button>`;
 
   aviso.querySelector("button").addEventListener("click", () => {
     guardarVisto();
@@ -30,3 +28,4 @@
 
   document.body.appendChild(aviso);
 })();
+
