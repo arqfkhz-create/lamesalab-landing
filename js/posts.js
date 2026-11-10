@@ -25,14 +25,14 @@ function crearTarjeta(post) {
     : "";
 
   return `
-    <button type="button" data-post="${indice}" class="snap-start shrink-0 w-full sm:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] flex flex-col text-left rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+    <a href="/recursos/blog/${post.slug}/" class="snap-start shrink-0 w-full sm:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] flex flex-col text-left rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
       ${imagen}
       <span class="p-5 flex flex-col flex-1 w-full">
         <span class="block font-semibold text-lg text-ink mb-2">${post.titulo}</span>
         <span class="block text-sm text-ink-soft leading-relaxed">${post.resumen}</span>
         <span class="block mt-auto pt-4 text-sm font-semibold text-clay">Leer artículo →</span>
       </span>
-    </button>`;
+    </a>`;
 }
 
 function mostrarPosts(posts) {
