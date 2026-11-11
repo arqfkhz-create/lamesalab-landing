@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamesalab - Marketing para negocios de comida en Puerto Rico y Buenos Aires</title>
+    <meta name="facebook-domain-verification" content="fmfldtvb08dcl7pjgyxczxnsyrc61b" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2', 
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
+                sans: ['"Roboto Slab"', 'Georgia', 'sans-serif'],
+                display: ['"Fraunces"', 'Georgia', 'serif'],
+            },
+        },
+      },
+    };
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  
+<header class="sticky top-0 z-40 bg-sand/40 backdrop-blur border-b border-sand">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="/"><img src="/imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto"></a>
+
+   <!-- Menú de escritorio (desde 1024 px) -->
+<div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+  <a href="/servicios" class="hover:text-clay transition-colors">Servicios</a>
+
+  <!-- Recursos con desplegable -->
+  <div class="relative group">
+    <a href="/recursos/" class="inline-flex items-center gap-1 hover:text-clay transition-colors">
+      Recursos
+      <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+      </svg>
+    </a>
+    <div class="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block">
+      <div class="w-56 bg-white border border-sand rounded-md shadow-md py-2">
+        <a href="/recursos/evaluacion/" class="block px-4 py-2 hover:bg-sand hover:text-clay transition-colors">Evaluación gratuita</a>
+        <a href="/recursos/blog/" class="block px-4 py-2 hover:bg-sand hover:text-clay transition-colors">Blog</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quienes Somos con desplegable -->
+  <div class="relative group">
+    <a href="/quienes-somos/" class="inline-flex items-center gap-1 hover:text-clay transition-colors">
+      Quienes Somos
+      <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+      </svg>
+    </a>
+    <div class="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block">
+      <div class="w-56 bg-white border border-sand rounded-md shadow-md py-2">
+        <a href="/quienes-somos/contacto/" class="block px-4 py-2 hover:bg-sand hover:text-clay transition-colors">Contacto</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="/faq/" class="hover:text-clay transition-colors">FAQ</a>
+  <a href="/diagnostico/#diagnostico" class="rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-2.5 transition-colors">Diagnóstico gratis</a>
+</div>
+    <!-- Botón hamburguesa (celular y iPad) -->
+    <button id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"
+            class="lg:hidden p-2 -mr-2 text-ink-soft">
+      <svg id="icono-abrir" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="icono-cerrar" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú desplegable (celular y iPad) -->
+  <div id="menu-movil" class="hidden lg:hidden border-t border-sand bg-cream">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col text-ink-soft font-medium">
+      <a href="/servicios/" class="py-3 border-b border-sand">Servicios</a>
+      <a href="/recursos/" class="pt-3 pb-1">Recursos</a>
+        <div class="flex flex-col pl-4 pb-2 text-sm border-b border-sand">
+          <a href="/recursos/evaluacion/" class="py-2">Evaluación gratuita</a>
+          <a href="/recursos/blog/" class="py-2">Blog</a>
+        </div>
+      <a href="/quienes-somos/" class="py-3 border-b border-sand">Quienes Somos</a>
+        <div class="flex flex-col pl-4 pb-2 text-sm border-b border-sand">
+          <a href="/quienes-somos/contacto/" class="py-2">Contacto</a>
+        </div>
+      <a href="/faq/" class="py-3 border-b border-sand">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="mt-4 rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-3 text-center transition-colors">Diagnóstico gratis</a>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== CONTACTO ==================== -->
+<section class="bg-sand/40">
+  <div id="contacto" class="max-w-3xl mx-auto px-5 py-20">
+
+    <div class="mb-10">
+      <span class="text-sm font-semibold text-sage uppercase">Contacto</span>
+      <h1 class="font-display text-3xl md:text-4xl tracking-tight mt-2">Hablemos de tu negocio de comida.</h1>
+      <p class="mt-4 text-ink text-lg">Déjanos tus datos y te contactamos en menos de 24 horas, por el medio y en el horario que prefieras.</p>
+    </div>
+
+    <div class="bg-white rounded-3xl border border-sand shadow-sm p-6 sm:p-9">
+
+      <form id="form-contacto" novalidate class="space-y-4">
+        <div>
+          <label for="nombre" class="block text-sm font-semibold mb-1.5">Tu nombre <span class="text-clay">*</span></label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej. Ana Rivera"
+            class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="negocio" class="block text-sm font-semibold mb-1.5">Nombre del negocio <span class="text-clay">*</span></label>
+            <input type="text" id="negocio" name="negocio" required placeholder="Ej. La Cocina de Ana"
+              class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+          </div>
+          <div>
+            <label for="ubicacion" class="block text-sm font-semibold mb-1.5">Ubicación <span class="text-clay">*</span></label>
+            <input type="text" id="ubicacion" name="ubicacion" required placeholder="Pueblo o zona (ej. Caguas)"
+              class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="medio" class="block text-sm font-semibold mb-1.5">¿Cómo prefieres que te contactemos? <span class="text-clay">*</span></label>
+            <select id="medio" name="medio" required
+              class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+              <option value="">Elige una opción</option>
+              <option>WhatsApp</option>
+              <option>Llamada</option>
+              <option>Email</option>
+              <option>Instagram</option>
+            </select>
+          </div>
+          <div>
+            <label for="contacto-dato" class="block text-sm font-semibold mb-1.5">Teléfono, email o usuario <span class="text-clay">*</span></label>
+            <input type="text" id="contacto-dato" name="contacto" required placeholder="Ej. 787-555-1234"
+              class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+          </div>
+        </div>
+
+        <div>
+          <label for="horario" class="block text-sm font-semibold mb-1.5">Horario para contactarte <span class="text-clay">*</span></label>
+          <select id="horario" name="horario" required
+            class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+            <option value="">Elige una opción</option>
+            <option>Mañana (8:00 a 12:00)</option>
+            <option>Tarde (12:00 a 5:00)</option>
+            <option>Noche (5:00 a 8:00)</option>
+            <option>Cualquier horario</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="mensaje" class="block text-sm font-semibold mb-1.5">¿En qué te podemos ayudar? (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"
+            class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white"></textarea>
+        </div>
+
+        <p id="contacto-error" class="hidden text-sm text-clay-dark font-semibold"></p>
+
+        <button type="submit" id="btn-enviar"
+          class="rounded-full bg-clay hover:bg-clay-dark text-white font-semibold px-7 py-3 transition-colors">
+          Enviar mis datos
+        </button>
+      </form>
+
+      <!-- Mensaje de gracias (oculto hasta enviar) -->
+      <div id="contacto-gracias" class="hidden text-center">
+        <span class="text-clay-dark text-xs font-bold uppercase tracking-wider">Datos recibidos</span>
+        <h2 class="font-display text-3xl tracking-tight mt-4">¡Gracias! Te contactamos en menos de 24 horas.</h2>
+        <p class="mt-4 text-ink-soft text-lg">Si prefieres, también puedes escribirnos directo por
+          <a href="https://wa.me/19394986369" target="_blank" rel="noopener" class="text-clay underline">WhatsApp</a>.</p>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-ink-soft/70 mt-4">No compartimos tu información.</p>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-sand/40 border-t border-sand">
+  <div class="max-w-6xl mx-auto px-5 pt-8 flex flex-col items-center justify-center">
+    <div class="flex items-center justify-center gap-3 pb-8">
+   
+    <a class="text-sage hover:text-orange-600" aria-label="Visit TrendyMinds Facebook" href="https://www.facebook.com/p/Lamesalab-61594347794361/" target="_blank"><svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-8">
+            <path fill="currentColor"
+                d="m279.14 288 14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+            </path>
+        </svg>
+    </a>
+    <a class="text-sage hover:text-orange-600" aria-label="Visit TrendyMinds Instagram" href="https://www.instagram.com/lamesalab/" target="_blank"><svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-8">
+            <path fill="currentColor"
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+            </path>
+        </svg>
+    </a>
+    <a class="text-sage hover:text-clay" aria-label="WhatsApp de lamesalab" href="https://wa.me/19394986369" target="_blank" rel="noopener"><svg
+            class="h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+            </path>
+        </svg>
+    </a>
+</div>
+
+    <div>
+      <img src="/imgs/lamesalab-logo.png" class="h-28 w-auto mb-6" alt="Logo de lamesalab">   
+    </div>
+  
+  <div class="text-center text-xs text-ink-soft/60 pb-8">© <span id="year"></span> lamesalab. Todos los derechos reservados.</div>
+
+
+  </div>
+</footer>
+</body>
+
+<script src="/js/menu.js"></script>
+<script src="/js/whatsapp.js"></script>
+<script src="/js/contacto.js"></script>
