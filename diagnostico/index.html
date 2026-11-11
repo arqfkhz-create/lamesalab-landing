@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>lamesalab — Marketing y Consultoria para Restaurantes</title>
-  <meta name="description" content="Consultoría estratégica integral para negocios. Diagnosticamos tu momento y te damos el próximo paso: herramientas gratuitas o un plan para escalar con publicidad."/>
+  <title>Diagnóstico gratis para tu restaurante | lamesalab</title>
+  <!-- SEO -->
+  <meta name="description" content="En 2 minutos te decimos si tu negocio de comida está listo para invertir en publicidad o qué conviene ordenar primero. Gratis y sin compromiso.">
+  <link rel="canonical" href="https://lamesalab.com/diagnostico/">
+  <link rel="icon" type="image/png" href="/imgs/lamesalab-logo-cut.png">
+
+  <!-- Open Graph: vista previa en WhatsApp, Facebook y LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="lamesalab">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:title" content="Diagnóstico gratis para tu restaurante | lamesalab">
+  <meta property="og:description" content="En 2 minutos te decimos si tu negocio de comida está listo para invertir en publicidad o qué conviene ordenar primero. Gratis y sin compromiso.">
+  <meta property="og:url" content="https://lamesalab.com/diagnostico/">
+  <meta property="og:image" content="https://lamesalab.com/imgs/marla-y-fred.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- /SEO -->
 
   <!-- Tailwind (Play CDN — para prototipo. Luego se puede compilar Tailwind local para producción) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink:    { DEFAULT: '#756D67', soft: '#292524' },
-            cream:  '#EBEDE1', 
-            dark:   '#3D3A2F',
-            sand:   '#f0e9df',
-            clay:   { DEFAULT: '#df2c1e', dark: '#a1501f', light: '#ca8a04' },
-            sage:   { DEFAULT: '#bf9000', dark: '#2f5248' },
-            
-          },
-          fontFamily: {
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2', 
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
                 sans: ['"Roboto Slab"', 'Georgia', 'sans-serif'],
                 display: ['"Fraunces"', 'Georgia', 'serif'],
             },
@@ -29,6 +41,7 @@
       },
     };
     </script>
+
 
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +61,7 @@
 <header class="sticky top-0 z-40 bg-sand/40 backdrop-blur border-b border-sand">
   <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
     <img src="../imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto">
-    <a href="#diagnostico" class="inline-flex items-center gap-2 rounded-md bg-clay hover:bg-dark text-white text-sm font-600 px-5 py-2.5 transition-colors">
+    <a href="#diagnostico" class="inline-flex items-center gap-2 rounded-md bg-clay hover:bg-sage text-white text-sm font-600 px-5 py-2.5 transition-colors">
       Diagnóstico gratis
     </a>
   </nav>
@@ -66,7 +79,7 @@
       <p class="mt-6 text-lg text-ink leading-relaxed max-w-lg justify-center">Primero entendemos tu restaurante, tus números y tus clientes. Recién después definimos qué necesitás para crecer — herramientas, estrategia o publicidad, cuando tenga sentido.</p>
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
         <a href="#diagnostico" class="inline-flex items-center justify-center gap-2 rounded-md bg-sage hover:bg-clay text-cream font-600 px-7 py-3.5 transition-colors uppercase">
-          Diagnostico Gratuito
+          Diagnóstico Gratuito
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
       </div>
@@ -185,8 +198,8 @@
           <span class="font-display text-4xl font-semibold text-clay">01</span>
           <span class="text-[11px] font-semibold uppercase tracking-wider text-ink-soft rounded-full px-3 py-1">Proyecto</span>
         </div>
-        <h3 class="font-display text-2xl font-semibold mt-4">Diagnostico Gratuito</h3>
-        <p class="mt-2 text-ink-soft leading-relaxed">Analizamos tu exposicion en redes.</p>
+        <h3 class="font-display text-2xl font-semibold mt-4">Diagnóstico Gratuito</h3>
+        <p class="mt-2 text-ink-soft leading-relaxed">Analizamos tu exposición en redes.</p>
 
         <ul class="svc-list mt-6 space-y-3 text-[0.95rem] leading-relaxed">
           <li><strong>Guía Presencia Digital:</strong> Guía práctica para negocios gastronómicos que quieren destacar en redes y en Google.</li>
@@ -195,7 +208,7 @@
 
         <div class="mt-auto pt-6">
           <p class="mb-3 text-xs text-center text-ink-soft/80">No incluye tocar ninguna cuenta: solo se mira y se recomienda.</p>
-          <a href="#diagnostico" class="flex w-full justify-center gap-2 rounded-lg bg-sage hover:bg-dark text-white text-sm font-semibold px-6 py-3 transition-colors">Diagnostico Gratuito
+          <a href="#diagnostico" class="flex w-full justify-center gap-2 rounded-lg bg-sage hover:bg-clay text-white text-sm font-semibold px-6 py-3 transition-colors">Diagnóstico Gratuito
           <svg class="h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
         </div>
@@ -231,7 +244,7 @@
         </div>
         <h3 class="font-display text-2xl font-semibold mt-4">Estrategia Integral</h3>
         <p class="text-ink font-normal text-lg">Mínimo 3 meses</p>
-        <p class="mt-2 text-ink leading-relaxed">El plan estrategico completo: qué hacer, en qué canal y cuándo.</p>
+        <p class="mt-2 text-ink leading-relaxed">El plan estratégico completo: qué hacer, en qué canal y cuándo.</p>
 
         <ul class="svc-list mt-6 space-y-3 text-[0.95rem] leading-relaxed">
           <li><strong>Momentos de consumo:</strong> mapa de demanda, momentos flojos y ofertas para cada momento.</li>
@@ -255,16 +268,16 @@
           <span class="text-[11px] font-semibold uppercase tracking-wider text-ink rounded-full px-3 py-1">Fee por lanzamiento</span>
         </div>
         <h3 class="font-display text-2xl md:text-3xl mt-4">Lanzamientos por Temporada</h3>
-        <p class="mt-2 leading-relaxed">Se planifica con anticipacion mediante calendario para obtener mejores resultados. Ideal para eventos, lanzamientos de menu nuevo, fechas especiales.</p>
+        <p class="mt-2 leading-relaxed">Se planifica con anticipación mediante calendario para obtener mejores resultados. Ideal para eventos, lanzamientos de menú nuevo, fechas especiales.</p>
       </div>
       <div class="space-y-4">
         <div class="rounded-2xl border border-dotted-1 border-sand p-4">
           <p class="text-[11px] font-semibold uppercase tracking-wider">Requisito</p>
-          <p class="mt-1 text-sm">Tener campanas activas en Meta Ads.</p>
+          <p class="mt-1 text-sm">Tener campañas activas en Meta Ads.</p>
         </div>
         <div class="rounded-2xl border border-dotted-1 border-sand p-4">
           <p class="text-[11px] font-semibold uppercase tracking-wider">Inversión en anuncios</p>
-          <p class="mt-1 text-sm">Va aparte y la pagás directo a Meta o Google.</p>
+          <p class="mt-1 text-sm">Va aparte y la pagas directo a Meta o Google.</p>
         </div>
         
       </div>
@@ -298,6 +311,16 @@
     <form id="diag-form" novalidate>
       <!-- Los pasos se inyectan desde diagnostico.js -->
     </form>
+
+    <!-- Se muestra después de enviar -->
+      <div id="escalar-gracias" class="hidden mt-8 max-w-xl mx-auto rounded-2xl bg-sage/10 border border-sage/30 p-6 text-center" role="status">
+        <p class="text-xs font-bold uppercase tracking-wider text-sage-dark">Datos recibidos</p>
+        <p class="font-display text-2xl font-semibold mt-2">¡Listo! Pronto nos comunicamos contigo.</p>
+        <p id="escalar-gracias-detalle" class="mt-3 text-ink-soft"></p>
+        <p class="mt-4 text-sm text-ink-soft">¿No quieres esperar? Escríbenos por
+           <a href="https://wa.me/19394986369" target="_blank" rel="noopener" class="text-clay font-semibold underline">WhatsApp</a>.
+        </p>
+      </div>`;
 
     <!-- Resultado (oculto hasta terminar) -->
     <div id="resultado" class="hidden"></div>

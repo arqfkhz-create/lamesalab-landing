@@ -424,13 +424,15 @@
             con herramientas gratuitas y consultoría puntual.
           </p>
         </div>
-        <div class="mt-8 grid sm:grid-cols-3 gap-3 text-left">
-          <div class="rounded-xl bg-sand/60 p-4"><p class="font-semibold">Diagnóstico honesto</p><p class="text-sm text-ink-soft mt-1">Qué te falta y en qué orden resolverlo.</p></div>
-          <div class="rounded-xl bg-sand/60 p-4"><p class="font-semibold">Herramienta gratuita</p><p class="text-sm text-ink-soft mt-1">Un recurso puntual para tu problema de hoy.</p></div>
-          <div class="rounded-xl bg-sand/60 p-4"><p class="font-semibold">Consultoría puntual</p><p class="text-sm text-ink-soft mt-1">Una sesión enfocada, sin comprometerte a más.</p></div>
-        </div>
+        
         <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="mailto:infolamesalab@gmail.com?subject=Quiero%20mi%20herramienta%20gratuita" class="rounded-full bg-clay hover:bg-clay-dark text-white font-semibold px-7 py-3.5 text-center transition-colors">Quiero mi herramienta gratuita</a>
+          <a href="/descargas/guia-presencia-digital-lamesalab.pdf" download
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-clay hover:bg-clay-dark text-white font-semibold px-7 py-3.5 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-5-5m5 5l5-5M4 20h16"/>
+            </svg>
+            Descargar mi guía gratuita (PDF)
+          </a>
           <button type="button" id="btn-reset" class="rounded-full border border-ink/20 hover:border-ink font-semibold px-7 py-3.5 transition-colors">Volver a empezar</button>
         </div>`;
     } else {
@@ -447,14 +449,48 @@
             (oferta, mensaje, embudo y campañas de Meta Ads) para <strong class="text-ink">${tip}</strong> con números claros.
           </p>
         </div>
-        <div class="mt-8 grid sm:grid-cols-3 gap-3 text-left">
-          <div class="rounded-xl bg-sand/60 p-4"><p class="font-semibold">Estrategia integral</p><p class="text-sm text-ink-soft mt-1">Del posicionamiento a la campaña, todo conectado.</p></div>
-          <div class="rounded-xl bg-sand/60 p-4"><p class="font-semibold">Campañas Meta Ads</p><p class="text-sm text-ink-soft mt-1">Estructura, creativos y optimización con datos.</p></div>
-          <div class="rounded-xl bg-sand/60 p-4"><p class="font-semibold">Métricas claras</p><p class="text-sm text-ink-soft mt-1">Saber qué funciona y cuánto te deja.</p></div>
-        </div>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="mailto:infolamesalab@gmail.com?subject=Quiero%20escalar%20con%20publicidad" class="rounded-full bg-ink hover:bg-ink-soft text-cream font-semibold px-7 py-3.5 text-center transition-colors">Agendar una llamada</a>
-          <button type="button" id="btn-reset" class="rounded-full border border-ink/20 hover:border-ink font-semibold px-7 py-3.5 transition-colors">Volver a empezar</button>
+                <form id="form-escalar" novalidate class="mt-8 max-w-xl mx-auto text-left space-y-4">
+          <p class="font-semibold text-center">¿Cómo y cuándo te contactamos para agendar la llamada?</p>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="escalar-medio" class="block text-sm font-semibold mb-1.5">¿Cómo prefieres que te contactemos? <span class="text-clay">*</span></label>
+              <select id="escalar-medio" name="medio" class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+                <option value="">Elige una opción</option>
+                ${opcionesDe("medio")}
+              </select>
+            </div>
+            <div>
+              <label for="escalar-horario" class="block text-sm font-semibold mb-1.5">Horario para contactarte <span class="text-clay">*</span></label>
+              <select id="escalar-horario" name="horario" class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+                <option value="">Elige una opción</option>
+                ${opcionesDe("horario")}
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="escalar-dato" class="block text-sm font-semibold mb-1.5">Teléfono, email o usuario <span class="text-clay">*</span></label>
+            <input type="text" id="escalar-dato" name="dato" placeholder="Ej. 787-555-1234"
+              class="w-full rounded-xl border-2 border-sand focus:border-clay px-4 py-3 outline-none transition-colors bg-white">
+          </div>
+
+          <p id="escalar-error" class="hidden text-sm text-clay-dark font-semibold"></p>
+
+          <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+            <button type="submit" id="escalar-enviar" class="rounded-full bg-clay hover:bg-clay-dark text-white font-semibold px-7 py-3.5 transition-colors">Quiero que me contacten</button>
+            <button type="button" id="btn-reset" class="rounded-full border border-ink/20 hover:border-ink font-semibold px-7 py-3.5 transition-colors">Volver a empezar</button>
+          </div>
+        </form>
+
+       <!-- Se muestra después de enviar -->
+        <div id="escalar-gracias" class="hidden mt-8 max-w-xl mx-auto rounded-2xl bg-sage/10 border border-sage/30 p-6 text-center" role="status">
+          <p class="text-xs font-bold uppercase tracking-wider text-sage-dark">Datos recibidos</p>
+          <p class="font-display text-2xl font-semibold mt-2">¡Listo! Pronto nos comunicamos contigo.</p>
+          <p id="escalar-gracias-detalle" class="mt-3 text-ink-soft"></p>
+          <p class="mt-4 text-sm text-ink-soft">¿No quieres esperar? Escríbenos por
+            <a href="https://wa.me/19394986369" target="_blank" rel="noopener" class="text-clay font-semibold underline">WhatsApp</a>.
+          </p>
         </div>`;
     }
 
@@ -468,6 +504,7 @@
       </details>`;
 
     mostrarResultado(html);
+    if (categoria === "escalar") conectarFormEscalar();
     enviarLead(categoria, score);
   }
 
@@ -476,6 +513,61 @@
     const s = PASOS_DIAGNOSTICO.find((st) => st.key === key);
     const opt = s && s.options.find((o) => o.value === answers[key].value);
     return opt ? opt.label : answers[key].value;
+  }
+
+  // Arma las <option> de un campo del paso de contacto rápido ("medio" u "horario").
+  function opcionesDe(nombreCampo) {
+    const campo = PASO_CONTACTO_RAPIDO.fields.find((f) => f.name === nombreCampo);
+    return campo.options.map((o) => `<option value="${esc(o)}">${o}</option>`).join("");
+  }
+
+  // Formulario de la Categoría 2: cómo y cuándo contactar para agendar la llamada.
+  function conectarFormEscalar() {
+    const formEscalar = document.getElementById("form-escalar");
+    const error = document.getElementById("escalar-error");
+    const boton = document.getElementById("escalar-enviar");
+
+    formEscalar.addEventListener("submit", function (evento) {
+      evento.preventDefault();
+
+      const medio = formEscalar.medio.value;
+      const horario = formEscalar.horario.value;
+      const dato = formEscalar.dato.value.trim();
+
+      if (!medio || !horario || !dato) {
+        error.textContent = "Completa los tres campos para que podamos contactarte.";
+        error.classList.remove("hidden");
+        return;
+      }
+
+      error.classList.add("hidden");
+      boton.disabled = true;
+      boton.textContent = "Enviando...";
+
+      const c = answers.contacto || {};
+      enviar({
+        access_key: "39d57920-4999-4435-bfd0-e0dff4cf7f6a",
+        subject: "Agendar llamada · Categoría 2 · " + (c.negocio || c.nombre || "Sin nombre"),
+        from_name: "Formulario lamesalab",
+        replyto: c.email || "",
+        Tipo: "Categoría 2 · quiere agendar una llamada",
+        Nombre: c.nombre || "",
+        Email: c.email || "",
+        Negocio: c.negocio || "(no indicó)",
+        "Medio de contacto": medio,
+        Contacto: dato,
+        "Horario para contactar": horario,
+      });
+
+       // Cambia el formulario por la confirmación, con lo que eligió la persona.
+      formEscalar.classList.add("hidden");
+      document.getElementById("escalar-gracias-detalle").innerHTML =
+        `Te vamos a escribir por <strong class="text-ink">${esc(medio)}</strong> ` +
+        `en el horario <strong class="text-ink">${esc(horario.toLowerCase())}</strong> para agendar la llamada.`;
+      const gracias = document.getElementById("escalar-gracias");
+      gracias.classList.remove("hidden");
+      gracias.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
   }
 
   function enviarLead(categoria, score) {

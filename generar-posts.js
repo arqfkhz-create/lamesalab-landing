@@ -16,6 +16,7 @@ const PAGINAS_FIJAS = [
   "/",
   "/servicios/",
   "/quienes-somos/",
+  "/quienes-somos/contacto/",
   "/faq/",
   "/recursos/",
   "/recursos/evaluacion/",
@@ -73,10 +74,13 @@ function crearContenido(parrafos) {
 }
 
 // Etiquetas para Google y para cuando se comparte el link en redes.
+// Reemplazan el bloque <!-- SEO --> ... <!-- /SEO --> del molde, así el artículo no queda con dos descriptions.
 function crearEtiquetasSeo(post) {
   const url = SITIO + "/recursos/blog/" + post.slug + "/";
   const titulo = escaparAtributo(post.titulo);
   const descripcion = escaparAtributo(post.resumen);
+  // Si el artículo no tiene foto, se usa la foto general del sitio.
+  const imagen = SITIO + (post.imagen || "/imgs/marla-y-fred.jpeg");
 
   // Datos estructurados: le dicen a Google que esta página es un artículo.
   const datos = {
@@ -86,25 +90,30 @@ function crearEtiquetasSeo(post) {
     description: post.resumen,
     datePublished: post.fecha,
     url: url,
-    author: { "@type": "Organization", name: "lamesalab" },
+    image: imagen,
+    inLanguage: "es",
+    author: { "@type": "Organization", name: "lamesalab", url: SITIO + "/" },
+    publisher: { "@id": SITIO + "/#empresa" },
   };
 
-  let etiquetas = `
-  <meta name="description" content="${descripcion}">
-  <link rel="canonical" href="${url}">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="${titulo}">
-  <meta property="og:description" content="${descripcion}">
-  <meta property="og:url" content="${url}">
-`;
+  return `<!-- SEO -->
+    <meta name="description" content="${descripcion}">
+    <link rel="canonical" href="${url}">
+    <link rel="icon" type="image/png" href="/imgs/lamesalab-logo-cut.png">
 
-  if (post.imagen) {
-    datos.image = SITIO + post.imagen;
-    etiquetas += `  <meta property="og:image" content="${SITIO}${post.imagen}">\n`;
-  }
+    <!-- Open Graph: vista previa en WhatsApp, Facebook y LinkedIn -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="lamesalab">
+    <meta property="og:locale" content="es_LA">
+    <meta property="og:title" content="${titulo}">
+    <meta property="og:description" content="${descripcion}">
+    <meta property="og:url" content="${url}">
+    <meta property="og:image" content="${imagen}">
+    <meta name="twitter:card" content="summary_large_image">
 
-  etiquetas += `  <script type="application/ld+json">${JSON.stringify(datos)}</script>\n`;
-  return etiquetas;
+    <!-- Datos estructurados (GEO) -->
+    <script type="application/ld+json">${JSON.stringify(datos)}</script>
+    <!-- /SEO -->`;
 }
 
 // El cuerpo del artículo, que reemplaza la sección del carrusel del molde.
@@ -124,7 +133,7 @@ function crearArticulo(post) {
 function crearPagina(molde, post) {
   let html = molde;
   html = reemplazarEntre(html, "<title>", "</title>", "<title>" + post.titulo + " | lamesalab</title>");
-  html = html.replace("</head>", crearEtiquetasSeo(post) + "</head>");
+  html = reemplazarEntre(html, "<!-- SEO -->", "<!-- /SEO -->", crearEtiquetasSeo(post));
   html = reemplazarEntre(html, "<section", "</section>", crearArticulo(post));
   return html;
 }
