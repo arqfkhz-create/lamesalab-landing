@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo llenar los días flojos de tu restaurante sin hacer descuentos | lamesalab</title>
+    <meta name="facebook-domain-verification" content="fmfldtvb08dcl7pjgyxczxnsyrc61b" />
+
+  
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2', 
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
+                sans: ['"Roboto Slab"', 'Georgia', 'sans-serif'],
+                display: ['"Fraunces"', 'Georgia', 'serif'],
+            },
+        },
+      },
+    };
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+
+
+  <meta name="description" content="Por qué el 2x1 no llena el martes y qué probamos en nuestra pizzería para traer clientes sin bajar los precios.">
+  <link rel="canonical" href="https://lamesalab.com/recursos/blog/llenar-dias-flojos-restaurante-sin-descuentos/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo llenar los días flojos de tu restaurante sin hacer descuentos">
+  <meta property="og:description" content="Por qué el 2x1 no llena el martes y qué probamos en nuestra pizzería para traer clientes sin bajar los precios.">
+  <meta property="og:url" content="https://lamesalab.com/recursos/blog/llenar-dias-flojos-restaurante-sin-descuentos/">
+  <meta property="og:image" content="https://lamesalab.com/imgs/imagen-blog-02.webp">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cómo llenar los días flojos de tu restaurante sin hacer descuentos","description":"Por qué el 2x1 no llena el martes y qué probamos en nuestra pizzería para traer clientes sin bajar los precios.","datePublished":"2026-11-08","url":"https://lamesalab.com/recursos/blog/llenar-dias-flojos-restaurante-sin-descuentos/","author":{"@type":"Organization","name":"lamesalab"},"image":"https://lamesalab.com/imgs/imagen-blog-02.webp"}</script>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  
+<header class="sticky top-0 z-40 bg-sand/40 backdrop-blur border-b border-sand">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="/"><img src="/imgs/lamesalab-logo-cut.png" alt="logo lamesalab" class="h-10 w-auto"></a>
+
+    <!-- Menú de escritorio (desde 1024 px) -->
+    <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+      <a href="/servicios" class="hover:text-clay transition-colors">Servicios</a>
+      <div class="relative group">
+      <a href="/recursos/" class="inline-flex items-center gap-1 hover:text-clay transition-colors">
+        Recursos
+        <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+        </svg>
+      </a>
+
+      <div class="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block">
+        <div class="w-56 bg-white border border-sand rounded-md shadow-md py-2">
+          <a href="/recursos/evaluacion/" class="block px-4 py-2 hover:bg-sand hover:text-clay transition-colors">Evaluación gratuita</a>
+          <a href="/recursos/blog/" class="block px-4 py-2 hover:bg-sand hover:text-clay transition-colors">Blog</a>
+        </div>
+      </div>
+    </div>
+      <a href="/quienes-somos" class="hover:text-clay transition-colors">Quienes Somos</a>
+      <a href="/faq" class="hover:text-clay transition-colors">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-2.5 transition-colors">Diagnóstico gratis</a>
+    </div>
+
+    <!-- Botón hamburguesa (celular y iPad) -->
+    <button id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"
+            class="lg:hidden p-2 -mr-2 text-ink-soft">
+      <svg id="icono-abrir" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="icono-cerrar" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú desplegable (celular y iPad) -->
+  <div id="menu-movil" class="hidden lg:hidden border-t border-sand bg-cream">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col text-ink-soft font-medium">
+      <a href="/servicios/" class="py-3 border-b border-sand">Servicios</a>
+      <a href="/recursos/" class="pt-3 pb-1">Recursos</a>
+        <div class="flex flex-col pl-4 pb-2 text-sm border-b border-sand">
+          <a href="/recursos/evaluacion/" class="py-2">Evaluación gratuita</a>
+          <a href="/recursos/blog/" class="py-2">Blog</a>
+        </div>
+      <a href="/quienes-somos/" class="py-3 border-b border-sand">Quienes Somos</a>
+      <a href="/faq/" class="py-3 border-b border-sand">FAQ</a>
+      <a href="/diagnostico/#diagnostico" class="mt-4 rounded-md bg-clay hover:bg-clay-dark text-white font-semibold px-5 py-3 text-center transition-colors">Diagnóstico gratis</a>
+    </div>
+  </div>
+</header>
+
+  <main class="bg-sand/40 py-12">
+  <article class="max-w-3xl mx-auto px-5 text-ink [&_p_a]:underline">
+    <a href="/recursos/blog/" class="text-sm text-clay">← Volver al blog</a>
+    <p class="text-sm text-ink-soft mt-8">8 de noviembre de 2026</p>
+    <h1 class="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-2 mb-8">Cómo llenar los días flojos de tu restaurante sin hacer descuentos</h1>
+    <p class="mb-5 leading-relaxed">“¿Cuánto tengo que poner en publicidad?” Es la pregunta que más nos hacen. Y la entendemos, porque nos la hicimos nosotros mismos en <a href='https://www.instagram.com/pizzerialarinconada' target='_blank' rel='noopener'>Pizzería La Rinconada</a>, nuestra pizzería en Buenos Aires. Cuando empezamos con anuncios, poníamos 10 dólares y esperábamos resultados. No servía de mucho, y durante un tiempo pensamos que la publicidad no era para nosotros. Después entendimos que el problema no era la publicidad, sino cómo la estábamos usando. Te contamos cuánto conviene invertir y qué hace que una campaña traiga clientes de verdad.</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">La buena noticia: en restaurantes, la publicidad rinde</h2>
+    <p class="mb-5 leading-relaxed">Los negocios de comida tienen ventaja en Meta. En 2025, en las campañas para conseguir clientes potenciales (mensajes o formularios), los restaurantes tuvieron la tasa de conversión más alta de todas las industrias, 18.25%, y uno de los costos más bajos: $3.16 por cliente potencial, contra un promedio de $27.66 en el resto de los rubros (<a href='https://www.wordstream.com/blog/facebook-ads-benchmarks-2025' target='_blank' rel='noopener'>WordStream y LocaliQ</a>). En otras palabras: a la gente le gusta ver comida, y cuando un anuncio de comida está bien armado, responde.</p>
+    <p class="mb-5 leading-relaxed">Y hay casos que lo muestran. Baked, una panadería con dos locales en Nueva York, armó videos sencillos de sus pasteles y los mostró a gente que vivía cerca: vendió un 40% más de pies para Acción de Gracias, consiguió un 68% más de contactos y bajó un 30% lo que pagaba por cada uno (<a href='https://www.casestudies.com/company/facebook/case-study/baked-nyc-customer-case-study' target='_blank' rel='noopener'>caso publicado por Facebook</a>).</p>
+    <p class="mb-5 leading-relaxed">Pescaria, un restaurante de comida rápida en Italia, empezó a anunciar dos meses antes de abrir, con fotos de sus platos y anuncios para la gente de la zona: el día de la inauguración llegaron más de 500 personas, y el 80% dijo que los había conocido por Facebook (<a href='https://www.casestudies.com/company/facebook/case-study/pescaria-customer-case-study' target='_blank' rel='noopener'>caso publicado por Facebook</a>).</p>
+    <p class="mb-5 leading-relaxed">No es casualidad que la industria esté apostando a esto: en una encuesta de mitad de 2026 a más de 420 operadores de restaurantes, el marketing, las promociones y la fidelización fueron la inversión más elegida para el segundo semestre (<a href='https://www.restaurant365.com/guides/2026-state-of-the-restaurant-industry-mid-year-report/' target='_blank' rel='noopener'>Restaurant365</a>).</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">Cuánto invertir: las reglas que más se usan</h2>
+    <p class="mb-5 leading-relaxed"><strong>Del 3 al 6% de las ventas.</strong> Es el rango que recomienda Toast para restaurantes que ya están funcionando, y conviene invertir más durante un lanzamiento. Como referencia, Chipotle invierte alrededor del 3% de sus ingresos en marketing, y los locales de Domino’s aportan el 6% de sus ventas (<a href='https://pos.toasttab.com/blog/on-the-line/average-marketing-budget-for-a-restaurant' target='_blank' rel='noopener'>Toast</a>).</p>
+    <p class="mb-5 leading-relaxed"><strong>Del 7 al 8% de las ventas.</strong> Es la recomendación de la Administración de Pequeñas Empresas de Estados Unidos (SBA), pensada para negocios con un margen de ganancia del 10 al 12% (<a href='https://smallbusiness.chron.com/percentage-gross-revenue-should-used-marketing-advertising-55928.html' target='_blank' rel='noopener'>Chron</a>). Como el margen promedio de un restaurante suele ser más bajo, de 2.8% a 4% según el tipo de local (<a href='https://restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/new-association-report-helps-operators-gauge-their-restaurant-performance' target='_blank' rel='noopener'>National Restaurant Association</a>), lo más útil es que cada dólar que inviertas esté medido.</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">Haz la cuenta al revés</h2>
+    <p class="mb-5 leading-relaxed">En vez de copiar un porcentaje, empieza por una pregunta: <strong>¿cuánto vale un cliente para tu negocio?</strong></p>
+    <p class="mb-5 leading-relaxed">Pensemos en un ejemplo. Si un cliente te deja $40 de ganancia en un año, entre lo que gasta y las veces que vuelve, puedes pagar hasta unos $13 para conseguirlo y seguir ganando: muchos negocios buscan que un cliente valga por lo menos tres veces lo que costó conseguirlo (<a href='https://merchants.doordash.com/es-us/blog/restaurant-customer-acquisition-cost' target='_blank' rel='noopener'>DoorDash</a>). Y si en restaurantes un contacto cuesta en promedio unos $3, hay margen para que la cuenta dé.</p>
+    <p class="mb-5 leading-relaxed">Para saber cuánto te cuesta hoy cada cliente nuevo: suma todo lo que invertiste en marketing en un mes, incluidos los descuentos, y divídelo por la cantidad de clientes nuevos que llegaron ese mes (<a href='https://merchants.doordash.com/es-us/blog/restaurant-customer-acquisition-cost' target='_blank' rel='noopener'>DoorDash</a>).</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">El presupuesto que hace que Meta trabaje a tu favor</h2>
+    <p class="mb-5 leading-relaxed">Esto es lo que no sabíamos cuando poníamos 10 dólares. Meta indica que, en general, un conjunto de anuncios necesita unos 50 resultados en una semana para terminar de aprender a quién mostrarle tus anuncios (<a href='https://www.facebook.com/business/help/112167992830700?id=561906377587030' target='_blank' rel='noopener'>Meta</a>). Cuando llega a ese punto, el sistema se vuelve mucho más eficiente: aprende quién responde y te busca más gente parecida.</p>
+    <p class="mb-5 leading-relaxed">Hagamos la cuenta: si cada mensaje te costara unos $3, para llegar a 50 por semana necesitarías alrededor de $150 por semana, unos $600 al mes. Con 10 dólares conseguíamos tres o cuatro mensajes: Meta nunca llegaba a aprender.</p>
+    <p class="mb-5 leading-relaxed">Es un ejemplo: el costo cambia según tu zona y tus anuncios, y en 2025 subió un 21% (<a href='https://searchengineland.com/facebook-ad-costs-jump-beat-google-461690' target='_blank' rel='noopener'>Search Engine Land</a>). Si estás en Argentina, los números son distintos, pero el método es el mismo.</p>
+    <p class="mb-5 leading-relaxed">¿Y si todavía no llegas a ese presupuesto? Concentra lo que tengas: una sola campaña, un solo objetivo y una zona cerca de tu local. Es mejor una campaña con dinero suficiente que tres que no aprenden. Y si estás pensando en hacerlo con el botón Promocionar, antes lee <a href='/recursos/blog/promocionar-instagram-restaurantes/'>si sirve el botón Promocionar de Instagram para un negocio de comida</a>.</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">Qué tienen en común las campañas que traen clientes</h2>
+    <p class="mb-5 leading-relaxed">Si miras los casos que funcionan, se repiten las mismas cosas:</p>
+    <p class="mb-5 leading-relaxed"><strong>Le hablan a la gente que está cerca.</strong> Baked mostró sus anuncios a quienes vivían a menos de dos kilómetros, y Pescaria a la gente de su zona. Para un negocio de comida, la distancia importa.</p>
+    <p class="mb-5 leading-relaxed"><strong>Muestran la comida de verdad.</strong> Fotos y videos de los platos, aunque sean hechos con el celular, funcionan mejor que un diseño genérico.</p>
+    <p class="mb-5 leading-relaxed"><strong>Tienen un objetivo claro.</strong> Pedidos, reservas o mensajes, no solo “me gusta”.</p>
+    <p class="mb-5 leading-relaxed"><strong>Empiezan con tiempo.</strong> Pescaria arrancó dos meses antes de abrir. Para una fecha especial, lo mismo: no esperes a la semana anterior.</p>
+    <p class="mb-5 leading-relaxed"><strong>Le hablan a gente nueva.</strong> Baked excluyó a quienes ya la seguían, para invertir en conseguir clientes nuevos.</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">Antes de invertir, prepara la llegada</h2>
+    <p class="mb-5 leading-relaxed">Para que la campaña rinda, el cliente tiene que encontrar todo listo cuando llega. Revisa estas cinco cosas:</p>
+    <p class="mb-5 leading-relaxed"><strong>Tu oferta está clara.</strong> En una frase, qué vendes y por qué elegirte.</p>
+    <p class="mb-5 leading-relaxed"><strong>Tu perfil de Google y tu Instagram están completos.</strong> La gente va a mirar ahí antes de decidir. De hecho, las reseñas y la búsqueda en Google fueron el canal más mencionado por los restaurantes para atraer clientes (<a href='https://www.restaurant365.com/guides/2026-state-of-the-restaurant-industry-mid-year-report/' target='_blank' rel='noopener'>Restaurant365</a>).</p>
+    <p class="mb-5 leading-relaxed"><strong>Alguien contesta los mensajes rápido.</strong> Si la campaña trae mensajes, que no se queden sin respuesta.</p>
+    <p class="mb-5 leading-relaxed"><strong>Puedes sostener la inversión por lo menos dos o tres meses.</strong> El primer mes es para aprender; los mejores resultados llegan después.</p>
+    <p class="mb-5 leading-relaxed"><strong>Tu margen aguanta.</strong> Si vendes pero no te queda ganancia, conviene revisar costos y precios antes de vender más.</p>
+    <p class="mb-5 leading-relaxed">Y no olvides lo que no está en la factura de Meta: las fotos y los videos, el tiempo de quien gestiona las campañas y el de quien responde. Lo “gratis” también lleva tiempo (<a href='https://www.pnc.com/insights/es/small-business/industry-insights/marketing-your-restaurant-business.html' target='_blank' rel='noopener'>PNC</a>).</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">Cómo empezar</h2>
+    <p class="mb-5 leading-relaxed"><strong>1.</strong> Define un presupuesto fijo de prueba para un mes.</p>
+    <p class="mb-5 leading-relaxed"><strong>2.</strong> Elige un solo objetivo, por ejemplo recibir mensajes o pedidos.</p>
+    <p class="mb-5 leading-relaxed"><strong>3.</strong> Muestra tu mejor plato a la gente que está cerca de tu local.</p>
+    <p class="mb-5 leading-relaxed"><strong>4.</strong> Mide cuánto te costó cada cliente nuevo, compáralo con lo que vale un cliente para ti, y decide si subes, mantienes o ajustas.</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">Preguntas frecuentes</h2>
+    <p class="mb-5 leading-relaxed"><strong>¿Cuál es el mínimo para anunciar en Instagram?</strong></p>
+    <p class="mb-5 leading-relaxed">Técnicamente se puede empezar con muy poco por día. Pero para que Meta aprenda y la campaña rinda, el presupuesto tiene que alcanzar para juntar resultados cada semana. A nosotros, con 10 dólares, no nos alcanzaba.</p>
+    <p class="mb-5 leading-relaxed"><strong>¿Conviene invertir poco todos los meses o mucho una sola vez?</strong></p>
+    <p class="mb-5 leading-relaxed">Poco y sostenido, casi siempre. La publicidad mejora con el tiempo porque aprende, y tus clientes necesitan verte más de una vez antes de decidirse.</p>
+    <p class="mb-5 leading-relaxed"><strong>¿El presupuesto incluye lo que cobra la agencia?</strong></p>
+    <p class="mb-5 leading-relaxed">No. Lo que inviertes en anuncios lo pagas directo a Meta o a Google, y lo que cobra quien gestiona tus campañas va aparte. Suma los dos cuando hagas la cuenta de cuánto te cuesta cada cliente.</p>
+    <p class="mb-5 leading-relaxed">Si quieres saber cuánto tendría sentido invertir en tu caso y qué necesita tu negocio para que la publicidad traiga clientes, empieza por el <a href='/diagnostico/'>diagnóstico gratis</a>. Te diremos con sinceridad si ya conviene pautar o si primero hay que ordenar algo.</p>
+    <h2 class="font-display text-2xl md:text-3xl text-ink mt-10 mb-4">Fuentes</h2>
+    <p class="mb-5 leading-relaxed">CaseStudies.com. (s. f.). <em>Baked NYC achieves 40% increase in pie sales and 68% more leads with Facebook</em>. <a href='https://www.casestudies.com/company/facebook/case-study/baked-nyc-customer-case-study' target='_blank' rel='noopener'>casestudies.com</a></p>
+    <p class="mb-5 leading-relaxed">CaseStudies.com. (s. f.). <em>Pescaria achieves record customer acquisition with Facebook</em>. <a href='https://www.casestudies.com/company/facebook/case-study/pescaria-customer-case-study' target='_blank' rel='noopener'>casestudies.com</a></p>
+    <p class="mb-5 leading-relaxed">Chron. (s. f.). <em>What percentage of gross revenue should be used for marketing &amp; advertising?</em> <a href='https://smallbusiness.chron.com/percentage-gross-revenue-should-used-marketing-advertising-55928.html' target='_blank' rel='noopener'>smallbusiness.chron.com</a></p>
+    <p class="mb-5 leading-relaxed">DoorDash. (2026, 5 de noviembre). <em>Comparación de los costos de adquisición de clientes del restaurante y los canales de marketing pagos</em>. <a href='https://merchants.doordash.com/es-us/blog/restaurant-customer-acquisition-cost' target='_blank' rel='noopener'>merchants.doordash.com</a></p>
+    <p class="mb-5 leading-relaxed">Meta. (s. f.). <em>About the learning phase</em>. Meta Business Help Center. <a href='https://www.facebook.com/business/help/112167992830700?id=561906377587030' target='_blank' rel='noopener'>facebook.com/business/help</a></p>
+    <p class="mb-5 leading-relaxed">National Restaurant Association. (2025). <em>New Association report helps operators gauge their restaurant performance</em>. <a href='https://restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/new-association-report-helps-operators-gauge-their-restaurant-performance' target='_blank' rel='noopener'>restaurant.org</a></p>
+    <p class="mb-5 leading-relaxed">PNC Insights. (2024, 30 de julio). <em>La receta secreta: cómo promocionar su empresa restaurantera</em>. <a href='https://www.pnc.com/insights/es/small-business/industry-insights/marketing-your-restaurant-business.html' target='_blank' rel='noopener'>pnc.com</a></p>
+    <p class="mb-5 leading-relaxed">Restaurant365. (2026). <em>2026 State of the Restaurant Industry: Mid-Year Report</em>. <a href='https://www.restaurant365.com/guides/2026-state-of-the-restaurant-industry-mid-year-report/' target='_blank' rel='noopener'>restaurant365.com</a></p>
+    <p class="mb-5 leading-relaxed">Search Engine Land. (2025). <em>Facebook ad costs jump 21% in 2025, but still beat Google</em>. <a href='https://searchengineland.com/facebook-ad-costs-jump-beat-google-461690' target='_blank' rel='noopener'>searchengineland.com</a></p>
+    <p class="mb-5 leading-relaxed">Toast. (2026, 13 de julio). <em>Average marketing budget for a restaurant</em>. <a href='https://pos.toasttab.com/blog/on-the-line/average-marketing-budget-for-a-restaurant' target='_blank' rel='noopener'>pos.toasttab.com</a></p>
+    <p class="mb-5 leading-relaxed">WordStream y LocaliQ. (2025). <em>Facebook ads benchmarks 2025</em>. <a href='https://www.wordstream.com/blog/facebook-ads-benchmarks-2025' target='_blank' rel='noopener'>wordstream.com</a></p>
+  </article>
+</main>
+
+ <!-- ==================== FOOTER ==================== -->
+<footer class="bg-sand/40 border-t border-sand">
+  <div class="max-w-6xl mx-auto px-5 pt-8 flex flex-col items-center justify-center">
+    <div class="flex items-center justify-center gap-3 pb-8">
+   
+    <a class="text-sage hover:text-orange-600" aria-label="Visit TrendyMinds Facebook" href="https://www.facebook.com/p/Lamesalab-61594347794361/" target="_blank"><svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-8">
+            <path fill="currentColor"
+                d="m279.14 288 14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+            </path>
+        </svg>
+    </a>
+    <a class="text-sage hover:text-orange-600" aria-label="Visit TrendyMinds Instagram" href="https://www.instagram.com/lamesalab/" target="_blank"><svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-8">
+            <path fill="currentColor"
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+            </path>
+        </svg>
+    </a>
+    <a class="text-sage hover:text-clay" aria-label="WhatsApp de lamesalab" href="https://wa.me/19394986369" target="_blank" rel="noopener"><svg
+            class="h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+            </path>
+        </svg>
+    </a>
+</div>
+
+    <div>
+      <img src="/imgs/lamesalab-logo.png" class="h-28 w-auto mb-6" alt="Logo de lamesalab">   
+    </div>
+  
+  <div class="text-center text-xs text-ink-soft/60 pb-8">© <span id="year"></span> lamesalab. Todos los derechos reservados.</div>
+
+
+  </div>
+</footer>
+
+<script src="/js/posts-datos.js"></script>
+<script src="/js/posts.js"></script>
+<script src="/js/whatsapp.js"></script>
+
+</body>

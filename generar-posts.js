@@ -109,21 +109,16 @@ function crearEtiquetasSeo(post) {
 
 // El cuerpo del artículo, que reemplaza la sección del carrusel del molde.
 function crearArticulo(post) {
-  let imagen = "";
-  if (post.imagen) {
-    imagen = `<img src="${post.imagen}" alt="" class="w-full rounded-lg mb-8">`;
-  }
-
-  return `<main class="py-12">
+  return `<main class="bg-sand/40 py-12">
   <article class="max-w-3xl mx-auto px-5 text-ink [&_p_a]:underline">
     <a href="/recursos/blog/" class="text-sm text-clay">← Volver al blog</a>
     <p class="text-sm text-ink-soft mt-8">${formatearFecha(post.fecha)}</p>
     <h1 class="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-2 mb-8">${post.titulo}</h1>
-    ${imagen}
     ${crearContenido(post.contenido)}
   </article>
 </main>`;
 }
+
 
 // Arma la página completa a partir del molde.
 function crearPagina(molde, post) {

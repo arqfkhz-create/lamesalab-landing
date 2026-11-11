@@ -25,7 +25,7 @@ function crearTarjeta(post) {
     : "";
 
   return `
-    <a href="/recursos/blog/${post.slug}/" class="snap-start shrink-0 w-full sm:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] flex flex-col text-left rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+    <a href="/recursos/blog/${post.slug}/" class="snap-start shrink-0 w-full sm:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] flex flex-col text-left rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
       ${imagen}
       <span class="p-5 flex flex-col flex-1 w-full">
         <span class="block font-semibold text-lg text-ink mb-2">${post.titulo}</span>
