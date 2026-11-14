@@ -1,0 +1,21 @@
+[
+  { "nombre": "gramos",              "factor": 1,        "tipo": "peso" },
+  { "nombre": "kilos",               "factor": 1000,     "tipo": "peso" },
+  { "nombre": "miligramos",          "factor": 0.001,    "tipo": "peso" },
+  { "nombre": "onzas",               "factor": 28.3495,  "tipo": "peso" },
+  { "nombre": "libras",              "factor": 453.592,  "tipo": "peso" },
+
+  { "nombre": "mililitros",          "factor": 1,        "tipo": "volumen" },
+  { "nombre": "centímetros cúbicos", "factor": 1,        "tipo": "volumen" },
+  { "nombre": "litros",              "factor": 1000,     "tipo": "volumen" },
+  { "nombre": "cucharaditas",        "factor": 5,        "tipo": "volumen" },
+  { "nombre": "cucharadas",          "factor": 15,       "tipo": "volumen" },
+  { "nombre": "tazas",               "factor": 240,      "tipo": "volumen" },
+  { "nombre": "onzas líquidas",      "factor": 29.5735,  "tipo": "volumen" },
+  { "nombre": "galon",             "factor": 3785.41,  "tipo": "volumen" },
+
+  { "nombre": "unidades",            "factor": 1,        "tipo": "unidad" },
+  { "nombre": "medias docenas",      "factor": 6,        "tipo": "unidad" },
+  { "nombre": "docenas",             "factor": 12,       "tipo": "unidad" },
+  { "nombre": "maple",              "factor": 30,       "tipo": "unidad" }
+]
