@@ -1,4 +1,8 @@
 (function () {
+  // Año actual en el footer (© 2026): este archivo carga en todas las páginas, así no se repite en cada una
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+
   const btn = document.getElementById("menu-btn");
   const menu = document.getElementById("menu-movil");
   const abrir = document.getElementById("icono-abrir");

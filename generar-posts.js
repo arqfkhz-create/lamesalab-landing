@@ -20,6 +20,7 @@ const PAGINAS_FIJAS = [
   "/faq/",
   "/recursos/",
   "/recursos/evaluacion/",
+  "/recursos/calculadora-costos/",
   "/recursos/blog/",
   "/diagnostico/",
 ];
