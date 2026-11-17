@@ -37,26 +37,24 @@
   <!-- Tailwind (Play CDN — para prototipo. Luego se puede compilar Tailwind local para producción) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink:    { DEFAULT: '#756D67', soft: '#292524' },
-            cream:  '#EBEDE1', 
-            dark:   '#3D3A2F',
-            sand:   '#f0e9df',
-            clay:   { DEFAULT: '#df2c1e', dark: '#a1501f', light: '#ca8a04' },
-            sage:   { DEFAULT: '#bf9000', dark: '#2f5248' },
-            
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['"Fraunces"', 'Georgia', 'serif'],
-          },
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+             ink:    { DEFAULT: '#44403c', soft: '#292524' },
+                cream:  '#f6f7f2', 
+                sand:   '#f0e9df',
+                clay:   { DEFAULT: '#F4320B', dark: '#a1501f', light: '#ca8a04' },
+                sage:   { DEFAULT: '#3f6b5e', dark: '#2f5248' },
+            },
+            fontFamily: {
+                sans: ['"Roboto Slab"', 'Georgia', 'sans-serif'],
+                display: ['"Fraunces"', 'Georgia', 'serif'],
+            },
         },
       },
     };
-  </script>
+    </script>
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -148,8 +146,17 @@
   </div>
 </header>
 
+
+<!--titulo pag. evaluacion-->
+<div class="bg-sand/40">
+    <div class="max-w-6xl mx-auto px-5 py-8 md:py-12 text-center">
+      <h1 class="font-display text-ink text-3xl lg:text-4xl leading-[1.05] tracking-tight text-balance mt-4">¿En qué etapa está tu negocio de comida?</h1>
+      <p class="mt-3 text-ink text-lg">La mayoría de los dueños no lo sabe. Cargá lo que compraste, cuánto rinde la receta, y te damos el precio de venta sugerido.</p>
+    </div>
+</div>
+
 <main class="flex-1 flex items-center justify-center bg-sand/40">
-  <div class="w-full max-w-3xl mx-auto px-5 py-12">
+  <div class="w-full max-w-3xl mx-auto px-5 py-6">
 
     <div id="evaluacion" class="scroll-mt-24 bg-white text-ink-soft border border-ink-soft border-t-4 shadow-2xl p-6 sm:p-9">
       <!-- Barra de progreso (oculta en la intro y en el resultado) -->

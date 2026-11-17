@@ -184,9 +184,7 @@
     pantalla.innerHTML = `
       <div class="paso text-center">
         <span class="text-sm font-semibold text-clay uppercase">Evaluación gratis · 5 minutos</span>
-        <h1 class="font-display text-3xl sm:text-4xl font-semibold text-ink-soft tracking-tight leading-tight mt-3 text-balance">
-          ¿Qué tan visible es tu negocio de comida?
-        </h1>
+      
         <p class="mt-4 text-lg max-w-xl mx-auto">
           Responde 12 preguntas y descubre qué está funcionando, qué te está haciendo perder clientes y por dónde empezar.
         </p>
